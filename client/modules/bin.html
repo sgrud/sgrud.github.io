@@ -163,16 +163,17 @@ Examples
 <p>Output file within package root.</p>
 </div><dl class="tsd-comment-tags"><dt>defaultvalue</dt><dd><p><code>&#39;runtimify.js&#39;</code></p>
 </dd></dl></div></li></ul></li></ul><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div><p>Execution promise.</p>
-</div></li></ul></section><section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module"><a id="universal" class="tsd-anchor"></a><h3>universal</h3><ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module"><li class="tsd-signature tsd-kind-icon">universal<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li></ul><ul class="tsd-descriptions"><li class="tsd-description"><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bin/src/universal.ts#L59">packages/bin/src/universal.ts:59</a></li></ul></aside><div class="tsd-comment tsd-typography"><div class="lead">
+</div></li></ul></section><section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module"><a id="universal" class="tsd-anchor"></a><h3>universal</h3><ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module"><li class="tsd-signature tsd-kind-icon">universal<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>chrome<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>entry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li></ul><ul class="tsd-descriptions"><li class="tsd-description"><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bin/src/universal.ts#L63">packages/bin/src/universal.ts:63</a></li></ul></aside><div class="tsd-comment tsd-typography"><div class="lead">
 <p>Runs SGRUD in universal (SSR) mode using
 <a href="https://www.npmjs.com/package/puppeteer">puppeteer</a>.</p>
 </div><div><pre><code class="language-text">Description
   Runs SGRUD in universal (SSR) mode using `puppeteer`
 
 Usage
-  $ sgrud universal [options]
+  $ sgrud universal [entry] [options]
 
 Options
+  --chrome      Chrome executable  (default /usr/bin/chromium-browser)
   --cwd         Use an alternative working directory  (default ./)
   -H, --host    Host to bind to  (default 127.0.0.1)
   -p, --port    Port to bind to  (default 4000)
@@ -181,7 +182,7 @@ Options
 Examples
   $ sgrud universal # Run with default options
   $ sgrud universal --host 0.0.0.0 # Listen on all IPs
-  $ sgrud universal -H 192.168.0.10 -p 8080 # Listen on 192.168.0.10:8080
+  $ sgrud universal -H 192.168.0.10 -p 4040 # Listen on 192.168.0.10:4040
 </code></pre>
 </div><dl class="tsd-comment-tags"><dt>example</dt><dd><p>Run with default options.</p>
 <pre><code class="language-js"><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;@sgrud/bin&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">sgrud</span><span class="hl-1">.</span><span class="hl-3">bin</span><span class="hl-1">.</span><span class="hl-0">universal</span><span class="hl-1">();</span>
@@ -189,14 +190,20 @@ Examples
 </dd><dt>example</dt><dd><p>Listen on all IPs.</p>
 <pre><code class="language-js"><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;@sgrud/bin&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">sgrud</span><span class="hl-1">.</span><span class="hl-3">bin</span><span class="hl-1">.</span><span class="hl-0">universal</span><span class="hl-1">({ </span><span class="hl-3">host:</span><span class="hl-1"> </span><span class="hl-2">&#39;0.0.0.0&#39;</span><span class="hl-1"> });</span>
 </code></pre>
-</dd><dt>example</dt><dd><p>Listen on <code>192.168.0.10:8080</code>.</p>
-<pre><code class="language-js"><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;@sgrud/bin&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">sgrud</span><span class="hl-1">.</span><span class="hl-3">bin</span><span class="hl-1">.</span><span class="hl-0">universal</span><span class="hl-1">({ </span><span class="hl-3">host:</span><span class="hl-1"> </span><span class="hl-2">&#39;192.168.0.10&#39;</span><span class="hl-1">, </span><span class="hl-3">port:</span><span class="hl-1"> </span><span class="hl-2">&#39;8080&#39;</span><span class="hl-1"> });</span>
+</dd><dt>example</dt><dd><p>Listen on <code>192.168.0.10:4040</code>.</p>
+<pre><code class="language-js"><span class="hl-0">require</span><span class="hl-1">(</span><span class="hl-2">&#39;@sgrud/bin&#39;</span><span class="hl-1">);</span><br/><span class="hl-3">sgrud</span><span class="hl-1">.</span><span class="hl-3">bin</span><span class="hl-1">.</span><span class="hl-0">universal</span><span class="hl-1">({ </span><span class="hl-3">host:</span><span class="hl-1"> </span><span class="hl-2">&#39;192.168.0.10&#39;</span><span class="hl-1">, </span><span class="hl-3">port:</span><span class="hl-1"> </span><span class="hl-2">&#39;4040&#39;</span><span class="hl-1"> });</span>
 </code></pre>
-</dd></dl></div><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameters"><li><h5>options: <span class="tsd-signature-symbol">{ </span>cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {}</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
+</dd></dl></div><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameters"><li><h5>options: <span class="tsd-signature-symbol">{ </span>chrome<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>entry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {}</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
 <p>Options object.</p>
-</div></div><ul class="tsd-parameters"><li class="tsd-parameter"><h5><span class="tsd-flag ts-flagOptional">Optional</span> cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
+</div></div><ul class="tsd-parameters"><li class="tsd-parameter"><h5><span class="tsd-flag ts-flagOptional">Optional</span> chrome<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
+<p>Chrome executable.</p>
+</div><dl class="tsd-comment-tags"><dt>defaultvalue</dt><dd><p><code>&#39;/usr/bin/chromium-browser&#39;</code></p>
+</dd></dl></div></li><li class="tsd-parameter"><h5><span class="tsd-flag ts-flagOptional">Optional</span> cwd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
 <p>Use an alternative working directory.</p>
 </div><dl class="tsd-comment-tags"><dt>defaultvalue</dt><dd><p><code>&#39;./&#39;</code></p>
+</dd></dl></div></li><li class="tsd-parameter"><h5><span class="tsd-flag ts-flagOptional">Optional</span> entry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
+<p>HTML document (relative to <code>cwd</code>).</p>
+</div><dl class="tsd-comment-tags"><dt>defaultvalue</dt><dd><p><code>&#39;index.html&#39;</code></p>
 </dd></dl></div></li><li class="tsd-parameter"><h5><span class="tsd-flag ts-flagOptional">Optional</span> host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><div class="lead">
 <p>Host to bind to.</p>
 </div><dl class="tsd-comment-tags"><dt>defaultvalue</dt><dd><p><code>&#39;127.0.0.1&#39;</code></p>
