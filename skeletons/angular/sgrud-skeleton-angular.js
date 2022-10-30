@@ -772,4 +772,4 @@ function Mv(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n
    * Use of this source code is governed by an MIT-style license that can be
    * found in the LICENSE file at https://angular.io/license
    */yM().bootstrapModule(zM,{ngZone:"noop"}).catch(function(e){console.error(e)})}();
-//# sourceMappingURL=sgrud-skeleton-angular.min.js.map
+//# sourceMappingURL=sgrud-skeleton-angular.js.map
