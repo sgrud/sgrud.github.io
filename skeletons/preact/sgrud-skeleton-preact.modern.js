@@ -1,0 +1,2 @@
+import e from"preact-custom-element";import{jsxs as t,Fragment as r,jsx as o}from"preact/jsx-runtime";import{Component as n}from"preact";class a extends n{render(e){return t(r,{children:[o("style",{children:":host>div>h1{font-style:italic}"}),t("div",{children:[t("h1",{children:["preact-component says hello ",e.name]}),o("div",{children:o("slot",{})})]})]})}}a.defaultProps={name:"world"},a.observedAttributes=["name"],a.tagName="preact-component",e(a,a.tagName,void 0,{shadow:!0});
+//# sourceMappingURL=sgrud-skeleton-preact.modern.js.map

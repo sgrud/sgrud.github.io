@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sgrud-skeleton-preact</title>
+
+<!-- DOM -->
+
+<preact-component name="universe">
+  <small>Child says hello, too!</small>
+</preact-component>
+
+<!-- ESM -->
+
+<script type="importmap">
+  {
+    "imports": {
+      "@babel/runtime/helpers/": "//unpkg.com/@babel/runtime/helpers/esm/",
+      "preact": "//unpkg.com/preact/dist/preact.module.js",
+      "preact-custom-element": "//unpkg.com/preact-custom-element/dist/preact-custom-element.modern.js",
+      "preact/jsx-runtime": "//unpkg.com/preact/jsx-runtime/dist/jsxRuntime.module.js",
+      "tslib": "//unpkg.com/tslib/tslib.es6.js"
+    }
+  }
+</script>
+<script type="module" src="/skeletons/preact/sgrud-skeleton-preact.modern.js"></script>
+
+<!-- UMD -->
+
+<script nomodule src="/skeletons/.run/@babel/runtime/runtimify.umd.js"></script>
+<script nomodule src="//unpkg.com/preact/dist/preact.umd.js"></script>
+<script nomodule src="//unpkg.com/preact/jsx-runtime/dist/jsxRuntime.umd.js"></script>
+<script nomodule src="//unpkg.com/preact-custom-element/dist/preact-custom-element.umd.js"></script>
+<script nomodule src="//unpkg.com/tslib/tslib.js"></script>
+
+<script nomodule src="/skeletons/preact/sgrud-skeleton-preact.umd.js"></script>

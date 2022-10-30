@@ -1,0 +1,37 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sgrud-skeleton-lit</title>
+
+<!-- DOM -->
+
+<lit-component name="universe">
+  <small>Child says hello, too!</small>
+</lit-component>
+
+<!-- ESM -->
+
+<script type="importmap">
+  {
+    "imports": {
+      "@babel/runtime/helpers/": "//unpkg.com/@babel/runtime/helpers/esm/",
+      "@lit/reactive-element": "//unpkg.com/@lit/reactive-element/reactive-element.js",
+      "@lit/reactive-element/": "//unpkg.com/@lit/reactive-element/",
+      "lit": "//unpkg.com/lit/index.js",
+      "lit/": "//unpkg.com/lit/",
+      "lit-element/": "//unpkg.com/lit-element/",
+      "lit-html": "//unpkg.com/lit-html/lit-html.js",
+      "lit-html/": "//unpkg.com/lit-html/",
+      "tslib": "//unpkg.com/tslib/tslib.es6.js"
+    }
+  }
+</script>
+<script type="module" src="/skeletons/lit/sgrud-skeleton-lit.modern.js"></script>
+
+<!-- UMD -->
+
+<script nomodule src="//unpkg.com/regenerator-runtime/runtime.js"></script>
+<script nomodule src="/skeletons/.run/@babel/runtime/runtimify.umd.js"></script>
+<script nomodule src="/skeletons/.run/lit/runtimify.umd.js"></script>
+<script nomodule src="//unpkg.com/tslib/tslib.js"></script>
+
+<script nomodule src="/skeletons/lit/sgrud-skeleton-lit.umd.js"></script>

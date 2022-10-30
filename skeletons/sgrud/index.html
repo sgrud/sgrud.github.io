@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sgrud-skeleton-sgrud</title>
+
+<!-- DOM -->
+
+<sgrud-component name="universe">
+  <small>Child says hello, too!</small>
+</sgrud-component>
+
+<!-- ESM -->
+
+<script type="importmap">
+  {
+    "imports": {
+      "@babel/runtime/helpers/": "//unpkg.com/@babel/runtime/helpers/esm/",
+      "@sgrud/core": "//unpkg.com/@sgrud/core/index.modern.js",
+      "@sgrud/shell": "//unpkg.com/@sgrud/shell/index.modern.js",
+      "@sgrud/shell/jsx-runtime": "//unpkg.com/@sgrud/shell/jsx-runtime/index.modern.js",
+      "comlink": "//unpkg.com/comlink/dist/esm/comlink.min.js",
+      "incremental-dom": "/skeletons/.run/incremental-dom/runtimify.esm.js",
+      "rxjs": "//unpkg.com/rxjs/dist/esm5/index.js",
+      "rxjs/ajax": "//unpkg.com/rxjs/dist/esm5/ajax/index.js",
+      "tslib": "//unpkg.com/tslib/tslib.es6.js"
+    }
+  }
+</script>
+<script type="module" src="/skeletons/sgrud/sgrud-skeleton-sgrud.modern.js"></script>
+
+<!-- UMD -->
+
+<script nomodule src="/skeletons/.run/@babel/runtime/runtimify.umd.js"></script>
+<script nomodule src="//unpkg.com/comlink/dist/umd/comlink.min.js"></script>
+<script nomodule src="//unpkg.com/incremental-dom/dist/incremental-dom-min.js"></script>
+<script nomodule src="//unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+<script nomodule src="//unpkg.com/tslib/tslib.js"></script>
+
+<script nomodule src="//unpkg.com/@sgrud/core/index.umd.js"></script>
+<script nomodule src="//unpkg.com/@sgrud/shell/index.umd.js"></script>
+<script nomodule src="//unpkg.com/@sgrud/shell/jsx-runtime/index.umd.js"></script>
+
+<script nomodule src="/skeletons/sgrud/sgrud-skeleton-sgrud.umd.js"></script>
