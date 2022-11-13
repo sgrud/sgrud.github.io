@@ -1,26 +1,30 @@
 # SGRUD
-> SGRUD is Growing Rapidly Until Distinction
+> SGRUD is Growing Rapidly Until Distinction.
 
-## @sgrud/thesis
-> `@sgrud/thesis` - The [SGRUD](https://sgrud.github.io) thesis.
+## SGRUD Thesis
+> The [SGRUD](https://sgrud.github.io) Thesis.
 
-- [view documentation](https://sgrud.github.io/thesis)
-- [view repository](https://github.com/sgrud/thesis)
+### References
+- [Documentation](https://sgrud.github.io/thesis)
+- [Repository](https://github.com/sgrud/thesis)
 
-## @sgrud/client
-> `@sgrud/client` - The [SGRUD](https://sgrud.github.io) client library.
+## SGRUD Client Libraries
+> The [SGRUD](https://sgrud.github.io) Client Libraries.
 
-- [view documentation](https://sgrud.github.io/client)
-- [view repository](https://github.com/sgrud/client)
+### References
+- [Documentation](https://sgrud.github.io/client)
+- [Repository](https://github.com/sgrud/client)
 
-## @sgrud/realworld
-> `@sgrud/realworld` - The [SGRUD](https://sgrud.github.io) realworld app.
+## SGRUD RealWorld App
+> The [SGRUD](https://sgrud.github.io) RealWorld App.
 
-- [view demonstration](https://sgrud.github.io/realworld)
-- [view repository](https://github.com/sgrud/client/blob/main/packages/bus)
+### References
+- [Demonstration](https://sgrud.github.io/realworld)
+- [Repository](https://github.com/sgrud/client/blob/main/packages/bus)
 
-## @sgrud/skeletons
-> `@sgrud/skeletons` - [SGRUD](https://sgrud.github.io)-compatible skeletons.
+## SGRUD Skeletons
+> [SGRUD](https://sgrud.github.io)-compatible Skeletons.
 
-- [view demonstration](https://sgrud.github.io/skeletons)
-- [view repository](https://github.com/sgrud/skeletons)
+### References
+- [Demonstration](https://sgrud.github.io/skeletons)
+- [Repository](https://github.com/sgrud/skeletons)
