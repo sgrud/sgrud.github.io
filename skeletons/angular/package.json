@@ -1,1 +1,27 @@
-{"name":"sgrud-skeleton-angular","private":true,"version":"0.0.0","exports":"./sgrud-skeleton-angular.js","unpkg":"./sgrud-skeleton-angular.js","scripts":{"build":"ng build --deploy-url /dist/ && sgrud postbuild","start":"sgrud universal ./dist/index.html"},"browserslist":[],"devDependencies":{"@angular-builders/custom-webpack":"14.0.1","@angular/cli":"14.2.7","@angular/core":"14.2.8","@angular/elements":"14.2.8","@angular/platform-browser":"14.2.8","@angular/platform-browser-dynamic":"14.2.8","@sgrud/bin":"latest","@types/estree":"1.0.0","tslib":"2.4.0"},"digest":{"exports":"sha256-hZyLavOdPswqd6/XuXrds8KUrRQ6C5+3+5d1reiDIAo=","unpkg":"sha256-hZyLavOdPswqd6/XuXrds8KUrRQ6C5+3+5d1reiDIAo="}}
+{
+  "name": "sgrud-skeleton-angular",
+  "private": true,
+  "version": "0.0.0",
+  "exports": "./sgrud-skeleton-angular.js",
+  "unpkg": "./sgrud-skeleton-angular.js",
+  "scripts": {
+    "build": "ng build --deploy-url /dist/ && sgrud postbuild",
+    "start": "sgrud universal ./dist/index.html"
+  },
+  "browserslist": [],
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "14.1.0",
+    "@angular/cli": "14.2.9",
+    "@angular/core": "14.2.10",
+    "@angular/elements": "14.2.10",
+    "@angular/platform-browser": "14.2.10",
+    "@angular/platform-browser-dynamic": "14.2.10",
+    "@sgrud/bin": "latest",
+    "@types/estree": "1.0.0",
+    "tslib": "2.4.1"
+  },
+  "digest": {
+    "exports": "sha256-wJfqCOPJ6ZKATera+BDRGLmVbn4tY0s+9Jl4Eyc+MZU=",
+    "unpkg": "sha256-wJfqCOPJ6ZKATera+BDRGLmVbn4tY0s+9Jl4Eyc+MZU="
+  }
+}

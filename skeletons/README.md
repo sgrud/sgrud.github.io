@@ -1,30 +1,44 @@
 # SGRUD
-> SGRUD is Growing Rapidly Until Distinction
+> SGRUD is Growing Rapidly Until Distinction.
 
-## @sgrud/skeletons
-> `@sgrud/skeletons` - [SGRUD](https://sgrud.github.io)-compatible skeletons.
+## SGRUD Skeletons
+> [SGRUD](https://sgrud.github.io)-compatible Skeletons.
 
-### @sgrud/skeletons/angular
-- based on [Angular](https://angular.io)
-- [view demonstration](https://sgrud.github.io/skeletons/angular)
-- [view repository](https://github.com/sgrud/skeletons/tree/main/angular)
+### References
+- [Demonstration](https://sgrud.github.io/skeletons)
+- [Repository](https://github.com/sgrud/skeletons)
 
-### @sgrud/skeletons/fast
-- based on [FAST Element](https://www.fast.design)
-- [view demonstration](https://sgrud.github.io/skeletons/fast)
-- [view repository](https://github.com/sgrud/skeletons/tree/main/fast)
+### sgrud-skeleton-angular
+> SGRUD-compatible Skeleton based on [Angular](https://angular.io).
 
-### @sgrud/skeletons/lit
-- based on [Lit](https://lit.dev)
-- [view demonstration](https://sgrud.github.io/skeletons/lit)
-- [view repository](https://github.com/sgrud/skeletons/tree/main/lit)
+#### References
+- [Demonstration](https://sgrud.github.io/skeletons/angular)
+- [Repository](https://github.com/sgrud/skeletons/tree/main/angular)
 
-### @sgrud/skeletons/preact
-- based on [Preact](https://preactjs.com)
-- [view demonstration](https://sgrud.github.io/skeletons/preact)
-- [view repository](https://github.com/sgrud/skeletons/tree/main/preact)
+### sgrud-skeleton-fast
+> SGRUD-compatible Skeleton based on [FAST Element](https://www.fast.design).
 
-### @sgrud/skeletons/sgrud
-- based on [SGRUD](https://sgrud.github.io)
-- [view demonstration](https://sgrud.github.io/skeletons/sgrud)
-- [view repository](https://github.com/sgrud/skeletons/tree/main/sgrud)
+#### References
+- [Demonstration](https://sgrud.github.io/skeletons/fast)
+- [Repository](https://github.com/sgrud/skeletons/tree/main/fast)
+
+### sgrud-skeleton-lit
+> SGRUD-compatible Skeleton based on [Lit](https://lit.dev).
+
+#### References
+- [Demonstration](https://sgrud.github.io/skeletons/lit)
+- [Repository](https://github.com/sgrud/skeletons/tree/main/lit)
+
+### sgrud-skeleton-preact
+> SGRUD-compatible Skeleton based on [Preact](https://preactjs.com).
+
+#### References
+- [Demonstration](https://sgrud.github.io/skeletons/preact)
+- [Repository](https://github.com/sgrud/skeletons/tree/main/preact)
+
+### sgrud-skeleton-sgrud
+> SGRUD-compatible Skeleton based on [SGRUD](https://sgrud.github.io).
+
+#### References
+- [Demonstration](https://sgrud.github.io/skeletons/sgrud)
+- [Repository](https://github.com/sgrud/skeletons/tree/main/sgrud)
