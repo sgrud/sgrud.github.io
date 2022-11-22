@@ -20,7 +20,7 @@
 
 ### References
 - [Demonstration](https://sgrud.github.io/realworld)
-- [Repository](https://github.com/sgrud/client/blob/main/packages/bus)
+- [Repository](https://github.com/sgrud/realworld)
 
 ## SGRUD Skeletons
 > [SGRUD](https://sgrud.github.io)-compatible Skeletons.
