@@ -112,7 +112,7 @@ called by all other distinct methods of the <em>Model</em>.</p>
 
 <h3>Returns</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of the <strong>commit</strong>ment.</p>
 
-<h3>Throws</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of ReferenceError.</p>
+<h3>Throws</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of a ReferenceError.</p>
 
 <h3>Example</h3><p><strong>Commit</strong> a <code>query</code>-type operation:</p>
 <pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">ExampleModel</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;./example-model&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">ExampleModel</span><span class="hl-1">.</span><span class="hl-0">commit</span><span class="hl-1">(</span><span class="hl-2">`query queryExample(variable: $variable) {</span><br/><span class="hl-2">  result {</span><br/><span class="hl-2">    field</span><br/><span class="hl-2">  }</span><br/><span class="hl-2">}`</span><span class="hl-1">, {</span><br/><span class="hl-1">  </span><span class="hl-3">variable:</span><span class="hl-1"> </span><span class="hl-2">&#39;value&#39;</span><br/><span class="hl-1">}).</span><span class="hl-0">subscribe</span><span class="hl-1">(</span><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">);</span>
@@ -611,7 +611,7 @@ still emitting the mutated <em>changes</em>.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1122">packages/data/src/model/model.ts:1122</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1134">packages/data/src/model/model.ts:1134</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="clear" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clear</span><a href="#clear" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -650,7 +650,7 @@ supplied, all enumerable properties of the class extending the abstract
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1155">packages/data/src/model/model.ts:1155</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1167">packages/data/src/model/model.ts:1167</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="commit-2" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>commit</span><a href="#commit-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -708,7 +708,7 @@ a <code>mapping</code>, the returned data will be mutated through the supplied
 <h4 class="tsd-returns-title">Returns <a href="../types/data.Model-1.Shape.html" class="tsd-signature-type" data-tsd-kind="Type alias">Shape</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1214">packages/data/src/model/model.ts:1214</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1226">packages/data/src/model/model.ts:1226</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="delete" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete</span><a href="#delete" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -743,7 +743,7 @@ internal <em>changes</em> <a href="https://rxjs.dev/api/index/class/BehaviorSubj
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1253">packages/data/src/model/model.ts:1253</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1265">packages/data/src/model/model.ts:1265</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="find" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>find</span><a href="#find" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -784,7 +784,7 @@ abstract <em>Model</em> base class and then <em>assign</em>s the returned data t
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1294">packages/data/src/model/model.ts:1294</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1306">packages/data/src/model/model.ts:1306</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="save" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>save</span><a href="#save" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -821,7 +821,7 @@ abstract <em>Model</em> base class and then <em>assign</em>s the returned data t
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1331">packages/data/src/model/model.ts:1331</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1343">packages/data/src/model/model.ts:1343</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="serialize-2" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>serialize</span><a href="#serialize-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -857,7 +857,7 @@ extending the abstract <em>Model</em> base class.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../types/data.Model-1.Shape.html" class="tsd-signature-type" data-tsd-kind="Type alias">Shape</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1361">packages/data/src/model/model.ts:1361</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1373">packages/data/src/model/model.ts:1373</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="treemap-2" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>treemap</span><a href="#treemap-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -893,27 +893,27 @@ abstract <em>Model</em> base class.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../types/data.Model-1.Graph.html" class="tsd-signature-type" data-tsd-kind="Type alias">Graph</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1389">packages/data/src/model/model.ts:1389</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1401">packages/data/src/model/model.ts:1401</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="_hasMany_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>[has<wbr/>Many]</span><a href="#_hasMany_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">[has<wbr/>Many]<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="http://127.0.0.1:8080/docs/functions/data.HasMany" target="_blank">HasMany</a> decorator.</p>
+<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="https://sgrud.github.io/client/functions/data.HasMany" target="_top">HasMany</a> decorator.</p>
 </div><aside class="tsd-sources">
 <ul>
 <li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L991">packages/data/src/model/model.ts:991</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="_hasOne_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>[has<wbr/>One]</span><a href="#_hasOne_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">[has<wbr/>One]<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="http://127.0.0.1:8080/docs/functions/data.HasOne" target="_blank">HasOne</a> decorator.</p>
+<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="https://sgrud.github.io/client/functions/data.HasOne" target="_top">HasOne</a> decorator.</p>
 </div><aside class="tsd-sources">
 <ul>
 <li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L984">packages/data/src/model/model.ts:984</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="_property_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>[property]</span><a href="#_property_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">[property]<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="http://127.0.0.1:8080/docs/functions/data.Property-1" target="_blank">Property</a> decorator.</p>
+<div class="tsd-comment tsd-typography"><p>Symbol property used by the <a href="https://sgrud.github.io/client/functions/data.Property-1" target="_top">Property</a> decorator.</p>
 </div><aside class="tsd-sources">
 <ul>
 <li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L998">packages/data/src/model/model.ts:998</a></li></ul></aside></section>
@@ -921,23 +921,29 @@ abstract <em>Model</em> base class.</p>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>created</span><a href="#created" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">created<span class="tsd-signature-symbol">?:</span> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" class="tsd-signature-type external" target="_blank">Date</a></div>
 <div class="tsd-comment tsd-typography"><p>Transient creation date of this <em>Model</em> instance.</p>
+
+<h3>Decorator</h3><p><a href="https://sgrud.github.io/client/functions/data.Property-1" target="_top">Property</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1010">packages/data/src/model/model.ts:1010</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1018">packages/data/src/model/model.ts:1018</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">id<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>Universally unique identifier of this <em>Model</em> instance.</p>
+
+<h3>Decorator</h3><p><a href="https://sgrud.github.io/client/functions/data.Property-1" target="_top">Property</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1004">packages/data/src/model/model.ts:1004</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1008">packages/data/src/model/model.ts:1008</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="modified" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>modified</span><a href="#modified" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">modified<span class="tsd-signature-symbol">?:</span> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" class="tsd-signature-type external" target="_blank">Date</a></div>
 <div class="tsd-comment tsd-typography"><p>Transient modification date of this <em>Model</em> instance.</p>
+
+<h3>Decorator</h3><p><a href="https://sgrud.github.io/client/functions/data.Property-1" target="_top">Property</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1016">packages/data/src/model/model.ts:1016</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1028">packages/data/src/model/model.ts:1028</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a id="_toStringTag_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <code class="tsd-tag ts-flagAbstract">Abstract</code> <span>[to<wbr/>String<wbr/>Tag]</span><a href="#_toStringTag_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">[to<wbr/>String<wbr/>Tag]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -945,7 +951,7 @@ abstract <em>Model</em> base class.</p>
 value of this property represents the repository which all instances of
 this <em>Model</em> are considered to belong to. In Detail, the different
 operations <em>commit</em>ted through this <em>Model</em> are derived from this singular
-name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.pluralize" target="_blank">pluralize</a>d form).</p>
+name (and the corresponding <a href="https://sgrud.github.io/client/functions/core.pluralize" target="_top">pluralize</a>d form).</p>
 
 <h3>Example</h3><p>Provide a valid symbol property:</p>
 <pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">Model</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@sgrud/data&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">export</span><span class="hl-1"> </span><span class="hl-5">class</span><span class="hl-1"> </span><span class="hl-7">ExampleModel</span><span class="hl-1"> </span><span class="hl-5">extends</span><span class="hl-1"> </span><span class="hl-7">Model</span><span class="hl-1">&lt;</span><span class="hl-7">ExampleModel</span><span class="hl-1">&gt; {</span><br/><br/><span class="hl-1">  </span><span class="hl-5">protected</span><span class="hl-1"> [</span><span class="hl-3">Symbol</span><span class="hl-1">.</span><span class="hl-3">toStringTag</span><span class="hl-1">]: </span><span class="hl-7">string</span><span class="hl-1"> = </span><span class="hl-2">&#39;ExampleModel&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-1">}</span>
@@ -960,14 +966,14 @@ name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.p
 <strong>changes</strong>.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1024">packages/data/src/model/model.ts:1024</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1036">packages/data/src/model/model.ts:1036</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a id="static" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>static</span><a href="#static" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">static<span class="tsd-signature-symbol">:</span> <a href="../modules/data.Model-1.html" class="tsd-signature-type" data-tsd-kind="Namespace">Model</a><span class="tsd-signature-symbol">.</span><a href="../interfaces/data.Model-1.Type.html" class="tsd-signature-type" data-tsd-kind="Interface">Type</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">&gt;</span></div>
 <div class="tsd-comment tsd-typography"><p>Type-asserted alias for the <strong>static</strong> <em>Model</em> context.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1029">packages/data/src/model/model.ts:1029</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1041">packages/data/src/model/model.ts:1041</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="_observable_" class="tsd-anchor"></a>
@@ -1001,7 +1007,7 @@ name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.p
 </div>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/interface/Subscribable" class="tsd-signature-type external" target="_blank">Subscribable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1049">packages/data/src/model/model.ts:1049</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1061">packages/data/src/model/model.ts:1061</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><a id="entity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>entity</span><a href="#entity" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-protected">
@@ -1013,7 +1019,7 @@ name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.p
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1058">packages/data/src/model/model.ts:1058</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1070">packages/data/src/model/model.ts:1070</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><a id="plural" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>plural</span><a href="#plural" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-protected">
@@ -1025,7 +1031,7 @@ name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.p
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1067">packages/data/src/model/model.ts:1067</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1079">packages/data/src/model/model.ts:1079</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><a id="type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-protected">
@@ -1037,7 +1043,7 @@ name (and the corresponding <a href="http://127.0.0.1:8080/docs/functions/core.p
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1076">packages/data/src/model/model.ts:1076</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1088">packages/data/src/model/model.ts:1088</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
 <section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class"><a id="constructor" class="tsd-anchor"></a>
@@ -1067,7 +1073,7 @@ creates a new <em>changes</em> <a href="https://rxjs.dev/api/index/class/Behavio
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="data.Model.html" class="tsd-signature-type" data-tsd-kind="Class">Model</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">M</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1093">packages/data/src/model/model.ts:1093</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/data/src/model/model.ts#L1105">packages/data/src/model/model.ts:1105</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -1103,7 +1109,9 @@ creates a new <em>changes</em> <a href="https://rxjs.dev/api/index/class/Behavio
 <ul>
 <li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/shell.JSX.html">JSX</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/shell.Router-1.html">Router</a></li></ul></li>
-<li class="tsd-kind-module"><a href="../modules/state.html">state</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="../modules/state.html">state</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/state.Store-1.html">Store</a></li></ul></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
 <li class="current tsd-kind-class tsd-parent-kind-module"><a href="data.Model.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Model</span></a>

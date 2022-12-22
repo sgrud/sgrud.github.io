@@ -80,7 +80,7 @@ called by all other distinct methods of the <em>Model</em>.</p>
 
 <h3>Returns</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of the <strong>commit</strong>ment.</p>
 
-<h3>Throws</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of ReferenceError.</p>
+<h3>Throws</h3><p><a href="https://rxjs.dev/api/index/class/Observable" target="_blank">Observable</a> of a ReferenceError.</p>
 
 <h3>Example</h3><p><strong>Commit</strong> a <code>query</code>-type operation:</p>
 <pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">ExampleModel</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;./example-model&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">ExampleModel</span><span class="hl-1">.</span><span class="hl-0">commit</span><span class="hl-1">(</span><span class="hl-2">`query queryExample(variable: $variable) {</span><br/><span class="hl-2">  result {</span><br/><span class="hl-2">    field</span><br/><span class="hl-2">  }</span><br/><span class="hl-2">}`</span><span class="hl-1">, {</span><br/><span class="hl-1">  </span><span class="hl-3">variable:</span><span class="hl-1"> </span><span class="hl-2">&#39;value&#39;</span><br/><span class="hl-1">}).</span><span class="hl-0">subscribe</span><span class="hl-1">(</span><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">);</span>
@@ -614,7 +614,9 @@ retrieved.</p>
 <ul>
 <li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/shell.JSX.html">JSX</a></li>
 <li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/shell.Router-1.html">Router</a></li></ul></li>
-<li class="tsd-kind-module"><a href="../modules/state.html">state</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="../modules/state.html">state</a>
+<ul>
+<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="../modules/state.Store-1.html">Store</a></li></ul></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
 <li class="current tsd-kind-interface tsd-parent-kind-namespace"><a href="data.Model-1.Type.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Type</span></a>
