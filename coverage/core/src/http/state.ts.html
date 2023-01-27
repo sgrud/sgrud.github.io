@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>137/137</span>
+                <span class='fraction'>135/135</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>137/137</span>
+                <span class='fraction'>135/135</span>
             </div>
         
             
@@ -198,9 +198,7 @@
 <a name='L133'></a><a href='#L133'>133</a>
 <a name='L134'></a><a href='#L134'>134</a>
 <a name='L135'></a><a href='#L135'>135</a>
-<a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a>
-<a name='L138'></a><a href='#L138'>138</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L136'></a><a href='#L136'>136</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -257,6 +255,11 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">56x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -270,10 +273,8 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -283,11 +284,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">48x</span>
-<span class="cline-any cline-yes">48x</span>
-<span class="cline-any cline-yes">48x</span>
-<span class="cline-any cline-yes">48x</span>
-<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -387,32 +383,6 @@ export class HttpState
   private readonly running: Map&lt;Request, Response&lt;any&gt;&gt;;
 &nbsp;
   /**
-   * Symbol property typed as callback to a [Subscribable][]. The returned
-   * [Subscribable][] emits an array of all active requests whenever this list
-   * changes. Using the returned [Subscribable][], e.g., a load indicator can
-   * easily be implemented.
-   *
-   * [Subscribable]: https://rxjs.dev/api/index/interface/Subscribable
-   *
-   * @returns Callback to a [Subscribable][].
-   *
-   * @example
-   * Subscribe to the currently active requests:
-   * ```ts
-   * import { HttpState, Linker } from '@sgrud/core';
-   * import { from } from 'rxjs';
-   *
-   * const httpState = new Linker&lt;typeof HttpState&gt;().get(HttpState);
-   * from(httpState).subscribe(console.log);
-   * ```
-   */
-  public get [Symbol.observable](): () =&gt; Subscribable&lt;Response&lt;any&gt;[]&gt; {
-    return () =&gt; this.changes.pipe(
-      map(() =&gt; Array.from(this.running.values()))
-    );
-  }
-&nbsp;
-  /**
    * Public **constructor**. Called by the [Target][] decorator to link this
    * [HttpProxy][] into the proxy chain.
    *
@@ -424,6 +394,30 @@ export class HttpState
 &nbsp;
     this.changes = new BehaviorSubject&lt;this&gt;(this);
     this.running = new Map&lt;Request, Response&lt;any&gt;&gt;();
+  }
+&nbsp;
+  /**
+   * Well-known `Symbol.observable` method returning a [Subscribable][]. The
+   * returned [Subscribable][] emits an array of all active requests whenever
+   * this list changes. Using the returned [Subscribable][], e.g., a load
+   * indicator can easily be implemented.
+   *
+   * [Subscribable]: https://rxjs.dev/api/index/interface/Subscribable
+   *
+   * @returns [Subscribable][] emitting requests.
+   *
+   * @example
+   * Subscribe to the currently active requests:
+   * ```ts
+   * import { HttpState, Linker } from '@sgrud/core';
+   * import { from } from 'rxjs';
+   *
+   * const httpState = new Linker&lt;typeof HttpState&gt;().get(HttpState);
+   * from(httpState).subscribe(console.log);
+   * ```
+   */
+  public [Symbol.observable](): Subscribable&lt;Response&lt;any&gt;[]&gt; {
+    return this.changes.pipe(map(() =&gt; Array.from(this.running.values())));
   }
 &nbsp;
   /**
@@ -461,10 +455,10 @@ export class HttpState
         this.running.set(request, event);
         this.changes.next(this);
       }),
-      filter(({ type }) =&gt; {
-        return Boolean(type === 'download_load' ||
-          includeDownloadProgress &amp;&amp; type.startsWith('download_') ||
-          includeUploadProgress &amp;&amp; type.startsWith('upload_'));
+      filter((event) =&gt; {
+        return Boolean(event.type === 'download_load' ||
+          includeDownloadProgress &amp;&amp; event.type.startsWith('download_') ||
+          includeUploadProgress &amp;&amp; event.type.startsWith('upload_'));
       }),
       finalize(() =&gt; {
         this.running.delete(request);
@@ -481,7 +475,7 @@ export class HttpState
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-12-25T22:33:54.310Z
+                at 2023-01-27T16:50:16.929Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

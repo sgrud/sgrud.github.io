@@ -380,14 +380,14 @@ method, persistance of one specific <em>Model</em> instance from the respective
 <div class="tsd-comment tsd-typography"><p>Static <strong>serialize</strong> method. Calling this method on a class extending the
 <em>Model</em>, while supplying a <code>model</code> which to <strong>serialize</strong> and optionally
 enabling <code>shallow</code> serialization, will return the <a href="https://sgrud.github.io/client/types/data.Model-1.Shape" target="_top">Shape</a> of the <em>Model</em>,
-i.e., a plain JSON representation of all <em>Model</em> fields, or undefined, if
+i.e., a plain JSON representation of all <em>Model</em> fields, or <code>undefined</code>, if
 the supplied <code>model</code> does not contain any fields or values. By serializing
 <code>shallow</code>ly, only properties defined on the supplied <code>model</code> are included
 (which means, all one-to-one and one-to-many associations are ignored).
 Through this method, the serialization of one specific <em>Model</em> instance
 from the respective <em>Model</em> repository can be achieved.</p>
 
-<h3>Returns</h3><p><a href="https://sgrud.github.io/client/types/data.Model-1.Shape" target="_top">Shape</a> of the <em>Model</em> or undefined.</p>
+<h3>Returns</h3><p><a href="https://sgrud.github.io/client/types/data.Model-1.Shape" target="_top">Shape</a> of the <em>Model</em> or <code>undefined</code>.</p>
 
 <h3>Example</h3><p><strong>Serialize</strong> a model:</p>
 <pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">ExampleModel</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;./example-model&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">model</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">ExampleModel</span><span class="hl-1">({ </span><span class="hl-3">field:</span><span class="hl-1"> </span><span class="hl-2">&#39;example&#39;</span><span class="hl-1"> });</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">shape</span><span class="hl-1"> = </span><span class="hl-3">ExampleModel</span><span class="hl-1">.</span><span class="hl-0">serialize</span><span class="hl-1">(</span><span class="hl-3">model</span><span class="hl-1">);</span><br/><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-3">shape</span><span class="hl-1">); </span><span class="hl-8">// { field: &#39;example&#39; }</span>
@@ -428,14 +428,14 @@ from the respective <em>Model</em> repository can be achieved.</p>
 abstract <em>Model</em> base class, while supplying a <code>model</code> which to <strong>treemap</strong>
 and optionally enabling <code>shallow</code> <strong>treemap</strong>ping, will return a <a href="https://sgrud.github.io/client/types/data.Model-1.Graph" target="_top">Graph</a>
 describing the fields which are declared and defined on the supplied
-<code>model</code>, or undefined, if the supplied <code>model</code> does not contain any fields
-or values. By <strong>treemap</strong>ping <code>shallow</code>ly, only properties defined on the
-supplied <code>model</code> are included (which means, all one-to-one and one-to-many
-associations are ignored). Through this method, the <a href="https://sgrud.github.io/client/types/data.Model-1.Graph" target="_top">Graph</a> for one
-specific <em>Model</em> instance from the respective <em>Model</em> repository can be
-retrieved.</p>
+<code>model</code>, or <code>undefined</code>, if the supplied <code>model</code> does not contain any
+fields or values. By <strong>treemap</strong>ping <code>shallow</code>ly, only properties defined
+on the supplied <code>model</code> are included (which means, all one-to-one and
+one-to-many associations are ignored). Through this method, the <a href="https://sgrud.github.io/client/types/data.Model-1.Graph" target="_top">Graph</a>
+for one specific <em>Model</em> instance from the respective <em>Model</em> repository
+can be retrieved.</p>
 
-<h3>Returns</h3><p><a href="https://sgrud.github.io/client/types/data.Model-1.Graph" target="_top">Graph</a> of the <em>Model</em> or undefined.</p>
+<h3>Returns</h3><p><a href="https://sgrud.github.io/client/types/data.Model-1.Graph" target="_top">Graph</a> of the <em>Model</em> or <code>undefined</code>.</p>
 
 <h3>Example</h3><p><strong>Treemap</strong> a <em>Model</em>:</p>
 <pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">ExampleModel</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;./example-model&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">model</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">ExampleModel</span><span class="hl-1">({ </span><span class="hl-3">field:</span><span class="hl-1"> </span><span class="hl-2">&#39;example&#39;</span><span class="hl-1"> });</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">graph</span><span class="hl-1"> = </span><span class="hl-3">ExampleModel</span><span class="hl-1">.</span><span class="hl-0">treemap</span><span class="hl-1">(</span><span class="hl-3">model</span><span class="hl-1">);</span><br/><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-3">graph</span><span class="hl-1">); </span><span class="hl-8">// [&#39;field&#39;]</span>
