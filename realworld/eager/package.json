@@ -1,1 +1,69 @@
-{"name":"sgrud-realworld-eager","private":true,"version":"0.0.0","exports":"./index.modern.js","sgrud":{"runtimify":["@babel/runtime:helpers.umd"]},"dependencies":{"@babel/runtime":"^7.18.0","@sgrud/core":"latest","@sgrud/shell":"latest","rxjs":"^7.5.5","sgrud-realworld-core":"latest","tslib":"^2.4.0"},"sgrudDependencies":{"sgrud-realworld-core":"/realworld/core"},"webDependencies":{"@babel/runtime":{"exports":{"@babel/runtime/helpers/":"./helpers/esm/"},"unpkg":["./runtimify.umd.js"]},"rxjs":{"exports":{"rxjs":"./dist/esm5/index.js"},"unpkg":["./dist/bundles/rxjs.umd.min.js"]},"tslib":{"exports":{"tslib":"./tslib.es6.js"},"unpkg":["./tslib.js"]}},"digest":{"exports":"sha256-4Lhybx+cKmOI1fWGTu6MMlthmW9Fy7+AaHL3XTgq4Zg="}}
+{
+  "name": "sgrud-realworld-eager",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./index.js",
+  "exports": "./index.modern.js",
+  "unpkg": "./index.umd.js",
+  "sgrud": {
+    "runtimify": [
+      "@babel/runtime:helpers.umd"
+    ]
+  },
+  "dependencies": {
+    "@babel/runtime": "7.21.5",
+    "@sgrud/core": "latest",
+    "@sgrud/shell": "latest",
+    "@sgrud/state": "latest",
+    "marked": "4.3.0",
+    "rxjs": "7.8.1",
+    "sgrud-realworld-core": "latest",
+    "tslib": "2.5.0"
+  },
+  "sgrudDependencies": {
+    "@sgrud/core": "latest",
+    "@sgrud/shell": "latest",
+    "@sgrud/shell/jsx-runtime": "latest",
+    "@sgrud/state": "latest",
+    "sgrud-realworld-core": "/realworld/core"
+  },
+  "webDependencies": {
+    "@babel/runtime": {
+      "exports": {
+        "@babel/runtime/helpers/": "./helpers/esm/"
+      },
+      "unpkg": [
+        "./runtimify.umd.js"
+      ]
+    },
+    "marked": {
+      "exports": {
+        "marked": "./lib/marked.esm.js"
+      },
+      "unpkg": [
+        "./lib/marked.umd.js"
+      ]
+    },
+    "rxjs": {
+      "exports": {
+        "rxjs": "./dist/esm5/index.js"
+      },
+      "unpkg": [
+        "./dist/bundles/rxjs.umd.min.js"
+      ]
+    },
+    "tslib": {
+      "exports": {
+        "tslib": "./tslib.es6.js"
+      },
+      "unpkg": [
+        "./tslib.js"
+      ]
+    }
+  },
+  "digest": {
+    "main": "sha256-Max2Zqb9aWKd84uXWJUXkpE1+IjBulrZMe33KMieK8I=",
+    "exports": "sha256-upy+0yJ2twhampp5lA5keSNMvaXqh9sMVEpdL00Is9s=",
+    "unpkg": "sha256-xAziUU4C9lwD1ao13enGbsAMqzAFtO608/ltrHd6j9w="
+  }
+}

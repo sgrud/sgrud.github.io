@@ -1,1 +1,59 @@
-{"name":"sgrud-realworld-core","private":true,"version":"0.0.0","exports":"./index.modern.js","sgrud":{"runtimify":["@babel/runtime:helpers.umd"]},"dependencies":{"@babel/runtime":"^7.18.0","@sgrud/core":"latest","@sgrud/shell":"latest","rxjs":"^7.5.5","tslib":"^2.4.0"},"sgrudDependencies":{"@sgrud/shell":"latest","@sgrud/shell/jsx-runtime":"latest"},"webDependencies":{"@babel/runtime":{"exports":{"@babel/runtime/helpers/":"./helpers/esm/"},"unpkg":["./runtimify.umd.js"]},"rxjs":{"exports":{"rxjs":"./dist/esm5/index.js"},"unpkg":["./dist/bundles/rxjs.umd.min.js"]},"tslib":{"exports":{"tslib":"./tslib.es6.js"},"unpkg":["./tslib.js"]}},"digest":{"exports":"sha256-UU7CVKjG3KAFqwV2KVk3HSdHnA+SpdmAY+zMuChZL6s="}}
+{
+  "name": "sgrud-realworld-core",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./index.js",
+  "exports": "./index.modern.js",
+  "unpkg": "./index.umd.js",
+  "sgrud": {
+    "runtimify": [
+      "@babel/runtime:helpers.umd"
+    ]
+  },
+  "dependencies": {
+    "@babel/runtime": "7.21.5",
+    "@sgrud/bus": "latest",
+    "@sgrud/core": "latest",
+    "@sgrud/shell": "latest",
+    "@sgrud/state": "latest",
+    "rxjs": "7.8.1",
+    "tslib": "2.5.0"
+  },
+  "sgrudDependencies": {
+    "@sgrud/bus": "latest",
+    "@sgrud/core": "latest",
+    "@sgrud/shell": "latest",
+    "@sgrud/state": "latest"
+  },
+  "webDependencies": {
+    "@babel/runtime": {
+      "exports": {
+        "@babel/runtime/helpers/": "./helpers/esm/"
+      },
+      "unpkg": [
+        "./runtimify.umd.js"
+      ]
+    },
+    "rxjs": {
+      "exports": {
+        "rxjs": "./dist/esm5/index.js"
+      },
+      "unpkg": [
+        "./dist/bundles/rxjs.umd.min.js"
+      ]
+    },
+    "tslib": {
+      "exports": {
+        "tslib": "./tslib.es6.js"
+      },
+      "unpkg": [
+        "./tslib.js"
+      ]
+    }
+  },
+  "digest": {
+    "main": "sha256-ZPX6LxP9ZNopPvOWNoKyA8ONqaVz1eUjfL23INqcPoM=",
+    "exports": "sha256-bfhmW1izInAQiTp4KpEqdgFmdazC0ZLTkpOIdgbnmNs=",
+    "unpkg": "sha256-mqme8wOi2uaqeZZpkn4g4on3rFTiB2Xt3O7paql+jGw="
+  }
+}
