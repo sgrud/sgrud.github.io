@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>170/170</span>
+                <span class='fraction'>163/163</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>170/170</span>
+                <span class='fraction'>163/163</span>
             </div>
         
             
@@ -226,14 +226,7 @@
 <a name='L161'></a><a href='#L161'>161</a>
 <a name='L162'></a><a href='#L162'>162</a>
 <a name='L163'></a><a href='#L163'>163</a>
-<a name='L164'></a><a href='#L164'>164</a>
-<a name='L165'></a><a href='#L165'>165</a>
-<a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a>
-<a name='L168'></a><a href='#L168'>168</a>
-<a name='L169'></a><a href='#L169'>169</a>
-<a name='L170'></a><a href='#L170'>170</a>
-<a name='L171'></a><a href='#L171'>171</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L164'></a><a href='#L164'>164</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -327,13 +320,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
@@ -409,18 +395,17 @@ import { Router } from './router';
 &nbsp;
 /**
  * Interface describing the shape of a **Route**. A **Route** must consist of at
- * least a *path* and may declare a *component*, which will be rendered when the
- * **Route** is navigated to, as well as *slots* and elements which will be
- * slotted within those. Furthermore a **Route** may also specify *children*.
+ * least a {@link path} and may specify a {@link component}, as well as
+ * {@link slots}, which will be rendered into the {@link RouterOutlet} when the
+ * **Route** is {@link Router.navigate}d to. Furthermore a **Route** may also
+ * specify {@link children}.
  *
- * [Router]: https://sgrud.github.io/client/classes/shell.Router
- *
- * @typeParam S - **Route** path string type.
+ * @typeParam S - The **Route** {@link Route.path} string type.
  *
  * @example
  * Define a **Route**:
  * ```ts
- * import type { Route } from '@sgrud/shell';
+ * import { type Route } from '@sgrud/shell';
  *
  * const route: Route = {
  *   path: '',
@@ -434,57 +419,53 @@ import { Router } from './router';
  * };
  * ```
  *
- * @see [Router][]
+ * @see {@link Router}
  */
 export interface Route&lt;S extends string = string&gt; {
 &nbsp;
   /**
-   * Optional array of **children** for this route.
+   * Optional array of **children** for this {@link Route}.
    */
   readonly children?: Route[];
 &nbsp;
   /**
-   * Optional route **component**.
+   * Optional {@link Route} **component**.
    */
   readonly component?: CustomElementTagName;
 &nbsp;
   /**
-   * Required route **path**.
+   * Required {@link Route} **path**.
    */
   readonly path: S;
 &nbsp;
   /**
-   * Optional mapping of **slots** to their elements.
+   * Optional mapping of elements to their **slots**.
    */
   readonly slots?: Record&lt;string, CustomElementTagName&gt;;
 &nbsp;
 }
 &nbsp;
 /**
- * Unique symbol used as property key by the [Route][] decorator to associate
- * the supplied route configuration to the decorated element.
- *
- * [Route]: https://sgrud.github.io/client/functions/shell.Route
+ * Unique symbol used as property key by the {@link Route} decorator to
+ * associate the supplied {@link Route} configuration with the decorated
+ * element.
  */
 export const route = Symbol('@sgrud/shell/router/route');
 &nbsp;
 /**
  * Class decorator factory. Applying the **Route** decorator to a custom element
- * will associate the supplied [Route][] `config` to the decorated element
- * constructor. Further, the configured children are iterated and every child
- * that is a custom element itself will be replaced by its respective [Route][].
- * Finally, the processed `config` for the decorated element is associated to
- * the element constructor and added to the [Router][].
+ * will associate the supplied `config` with the decorated element constructor.
+ * Further, the `config`ured children are iterated over and every child that is
+ * a custom element itself will be replaced by its respective {@link route}
+ * configuration or ignored, if no configuration was associated with the child.
+ * Finally, the processed `config` is added to the {@link Router}.
  *
- * [Route]: https://sgrud.github.io/client/interfaces/shell.Route-1
- * [Router]: https://sgrud.github.io/client/classes/shell.Router
- *
- * @param config - [Route][] config for this element.
- * @typeParam S - Route path string type.
- * @returns Class decorator.
+ * @param config - The {@link Route} `config` for this element.
+ * @typeParam S - The {@link Route} path string type.
+ * @returns A class constructor decorator.
  *
  * @example
- * Associate a [Route][] `config` to a element:
+ * Associate a {@link Route} `config` to a {@link Component}:
  * ```ts
  * import { Component, Route } from '@sgrud/shell';
  * import { ChildComponent } from './child-component';
@@ -496,10 +477,10 @@ export const route = Symbol('@sgrud/shell/router/route');
  *   ]
  * })
  * ⁠@Component('example-element')
- * export class ExampleComponent extends HTMLElement implements Component { }
+ * export class ExampleComponent extends HTMLElement implements Component {}
  * ```
  *
- * @see [Router][]
+ * @see {@link Router}
  */
 export function Route&lt;S extends string&gt;(config: Assign&lt;{
   children?: (Route | CustomElementConstructor &amp; { [route]?: Route })[];
@@ -507,16 +488,14 @@ export function Route&lt;S extends string&gt;(config: Assign&lt;{
 }, Omit&lt;Route&lt;S&gt;, 'component'&gt;&gt; &amp; {
 &nbsp;
   /**
-   * Optional parent for this [Route][].
-   *
-   * [Route]: https://sgrud.github.io/client/interfaces/shell.Route-1
+   * Optional **parent** for this {@link Route}.
    */
   parent?: Route | CustomElementConstructor &amp; { [route]?: Route };
 &nbsp;
 }) {
 &nbsp;
   /**
-   * @param constructor - Class constructor to be decorated.
+   * @param constructor - The class `constructor` to be decorated.
    */
   return function&lt;T extends CustomElementConstructor &amp; { [route]?: Route&lt;S&gt; }&gt;(
     constructor: T
@@ -580,7 +559,7 @@ export function Route&lt;S extends string&gt;(config: Assign&lt;{
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

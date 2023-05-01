@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>89/89</span>
+                <span class='fraction'>69/69</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>89/89</span>
+                <span class='fraction'>69/69</span>
             </div>
         
             
@@ -132,47 +132,7 @@
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -242,92 +202,72 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Observable } from 'rxjs';
-import { AjaxConfig as Request, AjaxResponse as Response } from 'rxjs/ajax';
 import { Provide, provide } from '../super/provide';
-import { HttpHandler } from './client';
+import { Http } from './http';
 &nbsp;
 /**
- * Abstract **HttpProxy** base class to implement proxies, i.e., HTTP request
- * interceptors, on the client side. By extending this abstract base class and
- * providing the extending class to the [Linker][], e.g., by [Target][]ing it,
- * the respective classes *proxy* method will be called with the request details
- * (which could have been modified by a previous **HttpProxy**) and the next
- * [HttpHandler][] (which could be the next **HttpProxy** or the [ajax][]
- * method), whenever a request is fired through the [HttpClient][].
+ * Abstract **Proxy** base class to implement {@link Http.Request} interceptors,
+ * on the client side. By extending this abstract base class and providing the
+ * extending class to the {@link Linker}, e.g., by {@link Target}ing it, the
+ * class's {@link handle} method will be called with the {@link Http.Request}
+ * details (which could have been modified by a previous **Proxy**) and the next
+ * {@link Http.Handler}, whenever a request is fired through the {@link Http}
+ * class.
  *
- * [ajax]: https://rxjs.dev/api/ajax/ajax
- * [HttpClient]: https://sgrud.github.io/client/classes/core.HttpClient
- * [HttpHandler]: https://sgrud.github.io/client/interfaces/core.HttpHandler
- * [Linker]: https://sgrud.github.io/client/classes/core.Linker
- * [Provide]: https://sgrud.github.io/client/functions/core.Provide-1
- * [Target]: https://sgrud.github.io/client/functions/core.Target
- *
- * @decorator [Provide][]
+ * @decorator {@link Provide}
  *
  * @example
- * Simple **HttpProxy** intercepting `file:` requests:
+ * Simple **Proxy** intercepting `file:` requests:
  * ```ts
- * import type { HttpHandler, HttpProxy } from '@sgrud/core';
- * import type { AjaxConfig, AjaxResponse } from 'rxjs/ajax';
- * import { Provider, Target } from '@sgrud/core';
- * import { Observable, of } from 'rxjs';
+ * import { type Http, Provider, type Proxy, Target } from '@sgrud/core';
+ * import { type Observable, of } from 'rxjs';
  * import { file } from './file';
  *
- * ⁠@Target&lt;typeof FileProxy&gt;()
+ * ⁠@Target()
  * export class FileProxy
- *   extends Provider&lt;typeof HttpProxy&gt;('sgrud.core.http.HttpProxy') {
+ *   extends Provider&lt;typeof Proxy&gt;('sgrud.core.Proxy') {
  *
- *   public override proxy&lt;T&gt;(
- *     request: AjaxConfig,
- *     handler: HttpHandler
- *   ): Observable&lt;AjaxResponse&lt;T&gt;&gt; {
+ *   public override handle(
+ *     request: Http.Request,
+ *     handler: Http.Handler
+ *   ): Observable&lt;Http.Response&gt; {
  *     if (request.url.startsWith('file:')) {
- *       return of&lt;AjaxResponse&lt;T&gt;&gt;(file);
+ *       return of&lt;Http.Response&gt;(file);
  *     }
  *
- *     return handler.handle&lt;T&gt;(request);
+ *     return handler.handle(request);
  *   }
+ *
  * }
  * ```
  *
- * @see [HttpClient][]
+ * @see {@link Http}
  */
-@Provide&lt;typeof HttpProxy&gt;()
-export abstract class HttpProxy {
+@Provide()
+export abstract class Proxy {
 &nbsp;
   /**
-   * Magic string by which this class is [provide][]d.
+   * Magic string by which this class is {@link provide}d.
    *
-   * [provide]: https://sgrud.github.io/client/variables/core.provide-2
-   *
-   * @see [provide][]
+   * @see {@link provide}
    */
-  public static readonly [provide]:
-  'sgrud.core.http.HttpProxy' = 'sgrud.core.http.HttpProxy' as const;
+  public static readonly [provide]: 'sgrud.core.Proxy' = 'sgrud.core.Proxy';
 &nbsp;
   /**
-   * The **proxy** method of linked classes extending the [HttpProxy][] base
-   * class is called whenever a request is fired through the [HttpClient][]. The
-   * extending class can either pass the `request` to the next `handler`, with
-   * or without modifying it, or an interceptor can chose to completely handle a
-   * `request` by itself through returning an [Observable][] [AjaxResponse][].
+   * The **handle** method of linked classes extending the {@link Proxy} base
+   * class is called whenever an {@link Http.Request} is fired. The extending
+   * class can either pass the `request` to the next `handler`, with or without
+   * modifying it, or an interceptor can chose to completely handle a `request`
+   * by itself through returning an {@link Observable} {@link Http.Response}.
    *
-   * [AjaxConfig]: https://rxjs.dev/api/ajax/AjaxConfig
-   * [AjaxResponse]: https://rxjs.dev/api/ajax/AjaxResponse
-   * [HttpClient]: https://sgrud.github.io/client/classes/core.HttpClient
-   * [HttpHandler]: https://sgrud.github.io/client/interfaces/core.HttpHandler
-   * [HttpProxy]: https://sgrud.github.io/client/classes/core.HttpProxy
-   * [Observable]: https://rxjs.dev/api/index/class/Observable
-   *
-   * @param request - Requesting [AjaxConfig][].
-   * @param handler - Next [HttpHandler][].
-   * @typeParam T - Response type.
-   * @returns [Observable][] of the requested [AjaxResponse][].
+   * @param request - The {@link Http.Request} to be **handle**d.
+   * @param handler - The next {@link Http.Handler} to **handle** the `request`.
+   * @returns An {@link Observable} of the **handle**d {@link Http.Response}.
    */
-  public abstract proxy&lt;T&gt;(
-    request: Request,
-    handler: HttpHandler
-  ): Observable&lt;Response&lt;T&gt;&gt;;
+  public abstract handle(
+    request: Http.Request,
+    handler: Http.Handler
+  ): Observable&lt;Http.Response&gt;;
 &nbsp;
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -337,7 +277,7 @@ export abstract class HttpProxy {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

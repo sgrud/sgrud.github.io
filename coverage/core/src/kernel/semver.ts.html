@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>90/90</span>
+                <span class='fraction'>97/97</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>32/32</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>90/90</span>
+                <span class='fraction'>97/97</span>
             </div>
         
             
@@ -153,7 +153,20 @@
 <a name='L88'></a><a href='#L88'>88</a>
 <a name='L89'></a><a href='#L89'>89</a>
 <a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -179,8 +192,6 @@
 <span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">176x</span>
-<span class="cline-any cline-yes">176x</span>
-<span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">191x</span>
@@ -192,6 +203,9 @@
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">191x</span>
+<span class="cline-any cline-yes">191x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">191x</span>
 <span class="cline-any cline-yes">165x</span>
@@ -238,19 +252,17 @@
 <span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">176x</span>
-<span class="cline-any cline-yes">89x</span>
+<span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">176x</span>
 <span class="cline-any cline-yes">165x</span>
 <span class="cline-any cline-yes">165x</span>
 <span class="cline-any cline-yes">76x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Best-effort [semver][] matcher. The supplied `version` will be tested against
+ * Best-effort **semver** matcher. The supplied `version` will be tested against
  * the supplied `range`.
  *
- * [semver]: https://semver.org
- *
- * @param version - Tested semantic version string.
- * @param range - Range to test the `version` against.
+ * @param version - The to-be tested semantic `version` string.
+ * @param range - The `range` to test the `version` against.
  * @returns Wether `version` satisfies `range`.
  *
  * @example
@@ -259,6 +271,14 @@
  * import { semver } from '@sgrud/core';
  *
  * semver('1.2.3', '&gt;2 &lt;1 || ~1.2.*'); // true
+ * ```
+ *
+ * @example
+ * Test `'1.2.3'` against `'~1.1'`:
+ * ```ts
+ * import { semver } from '@sgrud/core';
+ *
+ * semver('1.2.3', '~1.1'); // false
  * ```
  */
 export function semver(version: string, range: string): boolean {
@@ -271,7 +291,9 @@ export function semver(version: string, range: string): boolean {
     let valid = true;
 &nbsp;
     for (let part of parts) {
+      let index;
       let mode = '=';
+&nbsp;
       part = part.replace(/^[&lt;&gt;=~^]*/, (match) =&gt; {
         if (match) mode = match;
         return '';
@@ -282,7 +304,6 @@ export function semver(version: string, range: string): boolean {
         break;
       }
 &nbsp;
-      let index;
       const split = part.replace(/\+.*$/, '').split(/[-.]/);
 &nbsp;
       if (mode === '^') {
@@ -340,7 +361,7 @@ export function semver(version: string, range: string): boolean {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

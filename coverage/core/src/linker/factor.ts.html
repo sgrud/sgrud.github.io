@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>49/49</span>
+                <span class='fraction'>60/60</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>49/49</span>
+                <span class='fraction'>60/60</span>
             </div>
         
             
@@ -112,7 +112,18 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -144,68 +155,90 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
-<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">102x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Linker } from './linker';
 &nbsp;
 /**
- * Prototype property decorator factory. Replaces the decorated prototype
- * property with a getter, which looks up the linked instance of a target
- * constructor forwarded-referenced by the `targetFactory`.
+ * Prototype property decorator factory. Applying this decorator replaces the
+ * decorated prototype property with a getter, which returns the linked instance
+ * of a {@link Target}ed constructor, referenced by the `targetFactory`.
+ * Depending on the supplied `transient` value, the target constructor is
+ * invoked to construct (and link) an instance, if none is linked beforehand.
  *
- * [Linker]: https://sgrud.github.io/client/classes/core.Linker
- * [Target]: https://sgrud.github.io/client/functions/core.Target
- *
- * @param targetFactory - Forward reference to the target constructor.
- * @typeParam K - Constructor type.
- * @returns Prototype property decorator.
+ * @param targetFactory - A forward reference to the target constructor.
+ * @param transient - Wether an instance is constructed if none is linked.
+ * @typeParam K - The {@link Target}ed constructor type.
+ * @returns A prototype property decorator.
  *
  * @example
- * **Factor** a service:
+ * **Factor** an eager and lazy service:
  * ```ts
  * import { Factor } from '@sgrud/core';
- * import { Service } from './service';
+ * import { EagerService, LazyService } from './services';
  *
  * export class ServiceHandler {
  *
- *   ⁠@Factor(() =&gt; Service)
- *   private readonly service!: Service;
+ *   ⁠@Factor(() =&gt; EagerService)
+ *   private readonly service!: EagerService;
+ *
+ *   ⁠@Factor(() =&gt; LazyService, true)
+ *   private readonly service?: LazyService;
  *
  * }
  * ```
  *
- * @see [Linker][]
- * @see [Target][]
+ * @see {@link Linker}
+ * @see {@link Target}
  */
-export function Factor&lt;K extends new () =&gt; any&gt;(targetFactory: () =&gt; K) {
+export function Factor&lt;K extends new () =&gt; any&gt;(
+  targetFactory: () =&gt; K,
+  transient: boolean = false
+) {
 &nbsp;
   /**
-   * @param prototype - Prototype to be decorated.
-   * @param propertyKey - Prototype property to be decorated.
+   * @param prototype - The `prototype` to be decorated.
+   * @param propertyKey - The `prototype` property to be decorated.
    */
-  return function(
-    prototype: object,
-    propertyKey: PropertyKey
-  ): void {
+  return function(prototype: object, propertyKey: PropertyKey): void {
     Object.defineProperty(prototype, propertyKey, {
       enumerable: true,
-      get: () =&gt; new Linker&lt;K&gt;().get(targetFactory()),
-      set: Function.prototype as (...args: any[]) =&gt; void
+      get: (): InstanceType&lt;K&gt; | undefined =&gt; {
+        const linker = new Linker&lt;K&gt;();
+&nbsp;
+        if (transient &amp;&amp; !linker.has(targetFactory())) {
+          return undefined;
+        }
+&nbsp;
+        return linker.get(targetFactory());
+      },
+      set: Function.prototype as (...args: any[]) =&gt; any
     });
   };
 &nbsp;
@@ -217,7 +250,7 @@ export function Factor&lt;K extends new () =&gt; any&gt;(targetFactory: () =&gt;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

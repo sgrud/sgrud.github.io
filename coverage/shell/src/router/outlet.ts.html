@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>87/87</span>
+                <span class='fraction'>81/81</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>87/87</span>
+                <span class='fraction'>81/81</span>
             </div>
         
             
@@ -144,13 +144,7 @@
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -183,23 +177,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -221,23 +223,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Linker } from '@sgrud/core';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Factor } from '@sgrud/core';
+import { first, from, switchMap } from 'rxjs';
 import { customElements } from '../component/registry';
 import { Router } from './router';
 &nbsp;
@@ -245,9 +234,7 @@ declare global {
   interface HTMLElementTagNameMap {
 &nbsp;
     /**
-     * [RouterOutlet]: https://sgrud.github.io/client/classes/shell.RouterOutlet
-     *
-     * @see [RouterOutlet][]
+     * @see {@link RouterOutlet}
      */
     'router-outlet': RouterOutlet;
 &nbsp;
@@ -255,16 +242,12 @@ declare global {
 }
 &nbsp;
 /**
- * Custom element extending the [HTMLSlotElement][]. When this element is
- * constructed, it supplies the value of its *baseHref* attribute and the
- * presence of a *hashBased* attribute on itself to the [Router][] while
- * *bind*ing the [Router][] to itself. This element should only be used once, as
- * it will be used by the [Router][] as *outlet* to render the current
- * [State][].
- *
- * [HTMLSlotElement]: https://developer.mozilla.org/docs/Web/API/HTMLSlotElement
- * [Router]: https://sgrud.github.io/client/classes/shell.Router
- * [State]: https://sgrud.github.io/client/interfaces/shell.Router-1.State
+ * Custom element extending the {@link HTMLSlotElement}. When this element is
+ * constructed, it supplies the value of its {@link baseHref} attribute and the
+ * presence of a {@link hashBased} attribute on itself to the {@link Router}
+ * while {@link Router.connect}ing the {@link Router} to itself. This element
+ * should only be used once, as it will be used by the {@link Router} as
+ * {@link Router.outlet} to render the current {@link Router.State}.
  *
  * @example
  * A `router-outlet`:
@@ -272,48 +255,47 @@ declare global {
  * &lt;slot baseHref="/example" is="router-outlet"&gt;Loading...&lt;/slot&gt;
  * ```
  *
- * @see [Router][]
+ * @see {@link Router}
  */
 export class RouterOutlet extends HTMLSlotElement {
 &nbsp;
   /**
-   * Getter mirroring the **baseHref** attribute of the element.
+   * {@link Factor}ed-in **router** property linking the {@link Router}.
+   *
+   * @decorator {@link Factor}
+   */
+  @Factor(() =&gt; Router)
+  private readonly router!: Router;
+&nbsp;
+  /**
+   * Getter mirroring the **baseHref** attribute of this element.
    */
   public get baseHref(): string | undefined {
     return this.getAttribute('baseHref') || undefined;
   }
 &nbsp;
   /**
-   * Getter mirroring the presence of a **hashBased** attribute on the element.
+   * Getter mirroring the presence of a **hashBased** attribute on this element.
    */
   public get hashBased(): boolean {
     return this.hasAttribute('hashBased');
   }
 &nbsp;
   /**
-   * Custom element **constructor**. Supplies the value of its *baseHref*
-   * attribute and the presence of a *hashBased* attribute on itself to the
-   * [Router][] while *bind*ing the [Router][] to itself. It furthermore invokes
-   * a `setTimeout` loop, running until the number of routes the router contains
-   * evaluates truthy, which in turn triggers an initial navigation.
-   *
-   * [Router]: https://sgrud.github.io/client/classes/shell.Router
+   * Public **constructor** of this custom {@link RouterOutlet} element.
+   * Supplies the value of its {@link baseHref} attribute and the presence of a
+   * {@link hashBased} attribute on itself to the {@link Router} while
+   * {@link Router.connect}ing the {@link Router} to itself.
    */
   public constructor() {
-    super()<span class="branch-0 cbranch-no" title="branch not covered" >;</span>
+<span class="branch-0 cbranch-no" title="branch not covered" >    super();</span>
 &nbsp;
     const { hash, pathname, search } = location;
-    const router = new Linker&lt;typeof Router&gt;().get(Router);
+    this.router.connect(this, this.baseHref, this.hashBased);
 &nbsp;
-    router.bind(this, this.baseHref, this.hashBased);
-&nbsp;
-    (function navigate(): void {
-      if (router.size) {
-        router.navigate(pathname + hash, search, true).subscribe();
-      } else {
-        setTimeout(navigate);
-      }
-    })();
+    from(Router).pipe(first(), switchMap(() =&gt; {
+      return this.router.navigate(pathname + hash, search, 'replace');
+    })).subscribe();
   }
 &nbsp;
 }
@@ -331,7 +313,7 @@ customElements.define('router-outlet', RouterOutlet, {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

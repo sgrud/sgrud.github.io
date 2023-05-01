@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>160/160</span>
+                <span class='fraction'>136/136</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>160/160</span>
+                <span class='fraction'>136/136</span>
             </div>
         
             
@@ -199,55 +199,7 @@
 <a name='L134'></a><a href='#L134'>134</a>
 <a name='L135'></a><a href='#L135'>135</a>
 <a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a>
-<a name='L138'></a><a href='#L138'>138</a>
-<a name='L139'></a><a href='#L139'>139</a>
-<a name='L140'></a><a href='#L140'>140</a>
-<a name='L141'></a><a href='#L141'>141</a>
-<a name='L142'></a><a href='#L142'>142</a>
-<a name='L143'></a><a href='#L143'>143</a>
-<a name='L144'></a><a href='#L144'>144</a>
-<a name='L145'></a><a href='#L145'>145</a>
-<a name='L146'></a><a href='#L146'>146</a>
-<a name='L147'></a><a href='#L147'>147</a>
-<a name='L148'></a><a href='#L148'>148</a>
-<a name='L149'></a><a href='#L149'>149</a>
-<a name='L150'></a><a href='#L150'>150</a>
-<a name='L151'></a><a href='#L151'>151</a>
-<a name='L152'></a><a href='#L152'>152</a>
-<a name='L153'></a><a href='#L153'>153</a>
-<a name='L154'></a><a href='#L154'>154</a>
-<a name='L155'></a><a href='#L155'>155</a>
-<a name='L156'></a><a href='#L156'>156</a>
-<a name='L157'></a><a href='#L157'>157</a>
-<a name='L158'></a><a href='#L158'>158</a>
-<a name='L159'></a><a href='#L159'>159</a>
-<a name='L160'></a><a href='#L160'>160</a>
-<a name='L161'></a><a href='#L161'>161</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L137'></a><a href='#L137'>137</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -388,22 +340,17 @@ import { Observable } from 'rxjs';
 import { Model } from '../model/model';
 &nbsp;
 /**
- * Namespace containing types and interfaces used and intended to be used in
- * conjunction with the abstract [Querier][] base class and in context of the
- * [Model][] data handling.
+ * **Querier** namespace containing types and interfaces used and intended to be
+ * used in conjunction with the abstract {@link Querier} base class and in
+ * context of the {@link Model} data handling.
  *
- * [Model]: https://sgrud.github.io/client/classes/data.Model
- * [Querier]: https://sgrud.github.io/client/classes/data.Querier
- *
- * @see [Querier][]
+ * @see {@link Querier}
  */
 export namespace Querier {
 &nbsp;
   /**
-   * Type alias for a string union type of all known [Operation][] types:
-   * `'mutation'`, `'query'` and `'subscription'`.
-   *
-   * [Operation]: https://sgrud.github.io/client/types/data.Querier-1.Operation
+   * Type alias for a string union type of all known {@link Operation}
+   * **Type**s: `'mutation'`, `'query'` and `'subscription'`.
    */
   export type Type =
     'mutation' |
@@ -412,50 +359,48 @@ export namespace Querier {
 &nbsp;
   /**
    * String literal helper type. Enforces any assigned string to conform to the
-   * standard form of an operation: A string, starting with the [Type][],
+   * standard form of an **Operation**: A string starting with the {@link Type},
    * followed by one whitespace and the operation content.
-   *
-   * [Type]: https://sgrud.github.io/client/types/data.Querier-1.Type
    */
-  export type Operation = `${Querier.Type} ${string}`;
+  export type Operation = `${Type} ${string}`;
 &nbsp;
   /**
-   * Interface describing the shape of variables which may be embedded within
-   * [Operation][]s. Variables are a simple key-value map, which can be deeply
-   * nested.
-   *
-   * [Operation]: https://sgrud.github.io/client/types/data.Querier-1.Operation
+   * Interface describing the shape of **Variables** which may be embedded
+   * within {@link Operation}s. **Variables** are a simple key-value map, which
+   * can be deeply nested.
    */
   export interface Variables {
+&nbsp;
+    /**
+     * Index signature allowing keys to be of type `string` and values of type
+     * {@link Variables} or `undefined`.
+     */
     readonly [key: string]: Variables | unknown;
+&nbsp;
   }
 &nbsp;
 }
 &nbsp;
 /**
- * Abstract **Querier** base class to implement [Model][] data queriers. By
+ * Abstract **Querier** base class to implement {@link Model} **Querier**s. By
  * extending this abstract base class and providing the extending class to the
- * [Linker][], e.g., by [Target][]ing it, the respective classes *priority*
- * method will be called whenever the [Model][] *commits* data and, if this
- * class claims the highest priority, its *commit* method will be called.
+ * {@link Linker}, e.g., by {@link Target}ing it, the {@link priority} method of
+ * the resulting class will be called whenever the {@link Model} requests or
+ * persists data and, if this class claims the highest priority, its
+ * {@link commit} method will be called.
  *
- * [Linker]: https://sgrud.github.io/client/classes/core.Linker
- * [Model]: https://sgrud.github.io/client/classes/data.Model
- * [Provide]: https://sgrud.github.io/client/functions/core.Provide-1
- * [Target]: https://sgrud.github.io/client/functions/core.Target
- *
- * @decorator [Provide][]
+ * @decorator {@link Provide}
  *
  * @example
  * Simple **Querier** stub:
  * ```ts
- * import type { Model, Querier } from '@sgrud/data';
- * import type { Observable } from 'rxjs';
  * import { Provider, Target } from '@sgrud/core';
+ * import { type Querier } from '@sgrud/data';
+ * import { type Observable } from 'rxjs';
  *
- * ⁠@Target&lt;typeof ExampleQuerier&gt;()
+ * ⁠@Target()
  * export class ExampleQuerier
- *   extends Provider&lt;typeof Querier&gt;('sgrud.data.querier.Querier') {
+ *   extends Provider&lt;typeof Querier&gt;('sgrud.data.Querier') {
  *
  *   public override readonly types: Set&lt;Querier.Type&gt; = new Set&lt;Querier.Type&gt;([
  *     'query'
@@ -464,83 +409,66 @@ export namespace Querier {
  *   public override commit(
  *     operation: Querier.Operation,
  *     variables: Querier.Variables
- *   ): Observable&lt;any&gt; {
+ *   ): Observable&lt;unknown&gt; {
  *     throw new Error('Stub!');
  *   }
  *
- *   public override priority(model: Model.Type&lt;any&gt;): number {
+ *   public override priority(): number {
  *     return 0;
  *   }
  *
  * }
  * ```
  *
- * @see [Model][]
+ * @see {@link Model}
  */
-@Provide&lt;typeof Querier&gt;()
+@Provide()
 export abstract class Querier {
 &nbsp;
   /**
-   * Magic string by which this class is [provide][]d.
+   * Magic string by which this class is {@link provide}d.
    *
-   * [provide]: https://sgrud.github.io/client/variables/core.provide-2
-   *
-   * @see [provide][]
+   * @see {@link provide}
    */
-  public static readonly [provide]:
-  'sgrud.data.querier.Querier' = 'sgrud.data.querier.Querier' as const;
+  public static readonly [provide]: 'sgrud.data.Querier' = 'sgrud.data.Querier';
 &nbsp;
   /**
-   * A set containing all [Type][]s of queries this class can handle. May
-   * contain none to all of `'mutation'`, `'query'` and `'subscription'`.
-   *
-   * [Type]: https://sgrud.github.io/client/types/data.Querier-1.Type
+   * A set containing all **types** of queries this {@link Querier} can handle.
+   * May contain any of the `'mutation'`, `'query'` and `'subscription'`
+   * {@link Type}s.
    */
   public abstract readonly types: Set&lt;Querier.Type&gt;;
 &nbsp;
   /**
-   * The overridden **commit** method of [Target][]ed queriers is called by the
-   * [Model][] to **commit** operations. The invocation arguments are the
-   * `operation`, unraveled into a string, and all `variables` embedded within
-   * this operation. The extending class has to serialize the [Variables][] and
-   * transfer the operation. It's the callers responsibility to unravel the
-   * [Operation][] prior to invoking this method, and to deserialize and (error)
-   * handle whatever response is received.
+   * The overridden **commit** method of {@link Target}ed {@link Querier}s is
+   * called by the {@link Model} to execute {@link Operation}s. The invocation
+   * arguments are the `operation`, unraveled into a string, and all `variables`
+   * embedded within this operation. The extending class has to serialize the
+   * {@link Variables} and handle the operation. It's the callers responsibility
+   * to unravel the {@link Operation} prior to invoking this method, and to
+   * deserialize and (error) handle whatever response is received.
    *
-   * [Model]: https://sgrud.github.io/client/classes/data.Model
-   * [Observable]: https://rxjs.dev/api/index/class/Observable
-   * [Operation]: https://sgrud.github.io/client/types/data.Querier-1.Operation
-   * [Target]: https://sgrud.github.io/client/functions/core.Target
-   * [Variables]: https://sgrud.github.io/client/interfaces/data.Querier-1.Variables
-   *
-   * @param operation - Querier [Operation][] to be committed.
-   * @param variables - [Variables][] within the [Operation][].
-   * @returns [Observable][] of the committed [Operation][].
+   * @param operation - The {@link Operation} to be **commit**ted.
+   * @param variables - Any {@link Variables} within the {@link Operation}.
+   * @returns An {@link Observable} of the **commit**ted {@link Operation}.
    */
   public abstract commit(
     operation: Querier.Operation,
     variables?: Querier.Variables
-  ): Observable&lt;any&gt;;
+  ): Observable&lt;unknown&gt;;
 &nbsp;
   /**
-   * Whenever the *commit* method of the [Model][] is invoked, all [Target][]ed
-   * and compatible queriers, i.e., implementations of the this class capable of
-   * handling the specific [Type][] of the to be committed [Operation][], will
-   * be asked to prioritize themselves regarding the respective [Model][]. The
-   * querier claiming the highest **priority** will be chosen and its *commit*
-   * method called.
+   * When the {@link Model} executes {@link Operation}s, all {@link Target}ed
+   * and compatible {@link Querier}s, i.e., implementations of the this class
+   * capable of handling the specific {@link Type} of the {@link Operation} to
+   * {@link commit}, will be asked to prioritize themselves regarding the
+   * respective {@link Model}. The querier claiming the highest **priority**
+   * will be chosen and its {@link commit} method called.
    *
-   * [Model]: https://sgrud.github.io/client/classes/data.Model
-   * [Operation]: https://sgrud.github.io/client/types/data.Querier-1.Operation
-   * [Target]: https://sgrud.github.io/client/functions/core.Target
-   * [Type]: https://sgrud.github.io/client/types/data.Querier-1.Type
-   *
-   * @param model - [Model][] to be committed.
-   * @returns Priority of this implementation.
+   * @param model - The {@link Model} to be {@link commit}ted.
+   * @returns The numeric **priority** of this {@link Querier} implementation.
    */
-  public abstract priority(
-    model: Model.Type&lt;any&gt;
-  ): number;
+  public abstract priority(model: Model.Type&lt;Model&gt;): number;
 &nbsp;
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -550,7 +478,7 @@ export abstract class Querier {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-27T16:50:16.929Z
+                at 2023-05-01T20:23:48.807Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
