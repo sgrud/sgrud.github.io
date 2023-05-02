@@ -5,8 +5,8 @@
   "exports": "./sgrud-skeleton-preact.modern.js",
   "unpkg": "./sgrud-skeleton-preact.umd.js",
   "scripts": {
-    "postinstall": "sgrud runtimify",
-    "build": "sgrud construct --format modern,umd && sgrud postbuild",
+    "build": "sgrud construct --format modern,umd",
+    "postbuild": "sgrud postbuild && sgrud runtimify",
     "start": "sgrud universal ./dist/index.html"
   },
   "sgrud": {
@@ -15,16 +15,16 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "7.20.7",
-    "preact": "10.11.3",
+    "@babel/runtime": "7.21.5",
+    "preact": "10.13.2",
     "preact-custom-element": "4.2.1",
-    "tslib": "2.4.1"
+    "tslib": "2.5.0"
   },
   "devDependencies": {
     "@sgrud/bin": "latest",
     "@types/css-modules": "1.0.2",
     "@types/preact-custom-element": "4.0.1",
-    "sass": "1.57.1"
+    "sass": "1.62.1"
   },
   "webDependencies": {
     "@babel/runtime": {
@@ -63,7 +63,7 @@
     }
   },
   "digest": {
-    "exports": "sha256-vOsVhTFRxXdb6AtHvDp5FpBlhu6mefexOTS3LBNb+JU=",
-    "unpkg": "sha256-+yFfEKSF69iJ3tCsWLAOkpTiTzlXmITx4+ZnGWADE1I="
+    "exports": "sha256-W0NNz65voafHI4fQNZwJO3PK6FknhRm7rwEMcOf06cg=",
+    "unpkg": "sha256-a6Egq8Gv3jc5g2u4Io4hplBQzbakKwGpsHij9hLXvOw="
   }
 }
