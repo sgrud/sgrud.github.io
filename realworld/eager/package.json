@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.21.5",
+    "@sgrud/bus": "latest",
     "@sgrud/core": "latest",
     "@sgrud/shell": "latest",
     "@sgrud/state": "latest",
@@ -21,6 +22,7 @@
     "tslib": "2.5.0"
   },
   "sgrudDependencies": {
+    "@sgrud/bus": "latest",
     "@sgrud/core": "latest",
     "@sgrud/shell": "latest",
     "@sgrud/shell/jsx-runtime": "latest",
@@ -62,8 +64,8 @@
     }
   },
   "digest": {
-    "main": "sha256-Max2Zqb9aWKd84uXWJUXkpE1+IjBulrZMe33KMieK8I=",
-    "exports": "sha256-upy+0yJ2twhampp5lA5keSNMvaXqh9sMVEpdL00Is9s=",
-    "unpkg": "sha256-xAziUU4C9lwD1ao13enGbsAMqzAFtO608/ltrHd6j9w="
+    "main": "sha256-5kddDTnv5etqSrlSxid2WFDWagstKUF90ix2GMAxMOY=",
+    "exports": "sha256-COLVtb0/l9cfubcnxfD65S96/7zYe/PXoFu+DJ1Zk94=",
+    "unpkg": "sha256-CuiqOVg0rvgcTNc2RdT1qMNnxumfdDyBR6T8P2ly5aY="
   }
 }
