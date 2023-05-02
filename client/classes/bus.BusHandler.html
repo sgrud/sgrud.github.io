@@ -17,13 +17,12 @@
 <li><a href="bus.BusHandler.html">BusHandler</a></li></ul>
 <h1>Class BusHandler</h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>The <strong>BusHandler</strong> is a <a href="../types/core.Target.html" class="tsd-kind-type-alias">Target</a>ed <a href="../functions/core.Singleton.html" class="tsd-kind-function">Singleton</a> class implementing
-and orchestrating the establishment, transferral and deconstruction of any
-number of <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> streams. It operates in conjunction with the
-<a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a> <a href="../types/core.Thread.html" class="tsd-kind-type-alias">Thread</a> to run in the background. To designate and
-organize the different <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> streams, the string literal helper
-type <a href="../types/bus.Bus-1.Handle.html" class="tsd-kind-type-alias">Handle</a> is employed. As an example, let the following
-hierarchical structure be given:</p>
+<div class="tsd-comment tsd-typography"><p>The <strong>BusHandler</strong> implements and orchestrates the establishment, transferral
+and deconstruction of any number of <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> streams. It operates
+in conjunction with the <a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a> <a href="../types/core.Thread.html" class="tsd-kind-type-alias">Thread</a> which is run in the
+background. To designate and organize different <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> streams,
+the string literal helper type <a href="../types/bus.Bus-1.Handle.html" class="tsd-kind-type-alias">Handle</a> is employed. As an example,
+let the following hierarchical structure be given:</p>
 <pre><code class="language-text">io.github.sgrud
 ├── io.github.sgrud.core
 │   ├── io.github.sgrud.core.kernel
@@ -44,8 +43,6 @@ returned from the <a href="bus.BusHandler.html#observe" class="tsd-kind-method">
 originating from all streams beneath the root <a href="../types/bus.Bus-1.Handle.html" class="tsd-kind-type-alias">Handle</a> in the first
 case, or only <a href="../types/bus.Bus-1.Value.html" class="tsd-kind-type-alias">Value</a>s from one stream, in the second case.</p>
 
-<h3>Decorator</h3><p><a href="../types/core.Target.html" class="tsd-kind-type-alias">Target</a></p>
-
 <h3>Decorator</h3><p><a href="../functions/core.Singleton.html" class="tsd-kind-function">Singleton</a></p>
 
 <h3>See</h3><p><a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a></p>
@@ -55,7 +52,7 @@ case, or only <a href="../types/bus.Bus-1.Value.html" class="tsd-kind-type-alias
 <ul class="tsd-hierarchy">
 <li><span class="target">BusHandler</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L47">packages/bus/src/handler/handler.ts:47</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L46">packages/bus/src/handler/handler.ts:46</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -67,11 +64,13 @@ case, or only <a href="../types/bus.Bus-1.Value.html" class="tsd-kind-type-alias
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="bus.BusHandler.html#worker" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>worker</span></a>
+<div class="tsd-index-list"><a href="bus.BusHandler.html#loader" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>loader</span></a>
+<a href="bus.BusHandler.html#worker" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>worker</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
-<div class="tsd-index-list"><a href="bus.BusHandler.html#observe" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>observe</span></a>
+<div class="tsd-index-list"><a href="bus.BusHandler.html#_observable_" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>[observable]</span></a>
+<a href="bus.BusHandler.html#observe" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>observe</span></a>
 <a href="bus.BusHandler.html#publish" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>publish</span></a>
 <a href="bus.BusHandler.html#uplink" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>uplink</span></a>
 </div></section></div></details></section></section>
@@ -80,27 +79,70 @@ case, or only <a href="../types/bus.Bus-1.Value.html" class="tsd-kind-type-alias
 <section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="constructor.new_BusHandler"><span class="tsd-kind-constructor-signature">new <wbr/>Bus<wbr/>Handler</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a><a href="#constructor.new_BusHandler" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_BusHandler"><span class="tsd-kind-constructor-signature">new <wbr/>Bus<wbr/>Handler</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">source</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a><a href="#constructor.new_BusHandler" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a></h4></li></ul></section></section>
+<div class="tsd-comment tsd-typography"><p>Public <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a> <strong>constructor</strong>. As the <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a> is a
+<a href="../functions/core.Singleton.html" class="tsd-kind-function">Singleton</a> class, this <strong>constructor</strong> is only invoked the first
+time it is targeted by the <code>new</code> operator. Upon this first invocation, the
+<a href="bus.BusHandler.html#worker" class="tsd-kind-property">worker</a> property is assigned an instance of the <a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a>
+<a href="../types/core.Thread.html" class="tsd-kind-type-alias">Thread</a> while using the supplied <code>source</code>, if any.</p>
+
+<h3>Throws</h3><p>A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a> when the environment is incompatible.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">source</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>An optional <a href="../interfaces/core.Kernel-1.Module.html" class="tsd-kind-interface">Module</a> <code>source</code>.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L104">packages/bus/src/handler/handler.ts:104</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="loader" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagPrivate">Private</code> <span>loader</span><a href="#loader" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">loader</span><span class="tsd-signature-symbol">:</span> <a href="https://rxjs.dev/api/index/class/ReplaySubject" class="tsd-signature-type external" target="_blank">ReplaySubject</a><span class="tsd-signature-symbol">&lt;</span><a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a><span class="tsd-signature-symbol">&gt;</span></div>
+<div class="tsd-comment tsd-typography"><p>Private static <a href="https://rxjs.dev/api/index/class/ReplaySubject">ReplaySubject</a> used as the <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a>
+<strong>loader</strong>. This <strong>loader</strong> emits once after the <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a> has
+been successfully initialized.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L53">packages/bus/src/handler/handler.ts:53</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="worker" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>worker</span><a href="#worker" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">worker</span><span class="tsd-signature-symbol">:</span> <a href="../types/core.Thread.html" class="tsd-signature-type tsd-kind-type-alias">Thread</a><span class="tsd-signature-symbol">&lt;</span><a href="bus.BusWorker.html" class="tsd-signature-type tsd-kind-class">BusWorker</a><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p><a href="../functions/core.Spawn.html" class="tsd-kind-function">Spawn</a>ed <strong>worker</strong> <a href="../types/core.Thread.html" class="tsd-kind-type-alias">Thread</a> and main background workhorse.
-The underlying <a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a> is run inside a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a> context and
-handles <a href="bus.BusHandler.html#publish" class="tsd-kind-method">publish</a>ed and <a href="bus.BusHandler.html#observe" class="tsd-kind-method">observe</a>d streams and the aggregation
-of their values depending on their <a href="../types/bus.Bus-1.Handle.html" class="tsd-kind-type-alias">Handle</a>, i.e., hierarchy.</p>
-
-<h3>Decorator</h3><p><a href="../functions/core.Spawn.html" class="tsd-kind-function">Spawn</a></p>
+<div class="tsd-comment tsd-typography"><p>The <strong>worker</strong> <a href="../types/core.Thread.html" class="tsd-kind-type-alias">Thread</a> and main background workhorse. The underlying
+<a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a> is run inside a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a> context in the background
+and transparently handles <a href="bus.BusHandler.html#publish" class="tsd-kind-method">publish</a>ed and <a href="bus.BusHandler.html#observe" class="tsd-kind-method">observe</a>d streams
+and the aggregation of their values depending on their <a href="../types/bus.Bus-1.Handle.html" class="tsd-kind-type-alias">Handle</a>,
+i.e., hierarchy.</p>
 
 <h3>See</h3><p><a href="bus.BusWorker.html" class="tsd-kind-class">BusWorker</a></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L60">packages/bus/src/handler/handler.ts:60</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L92">packages/bus/src/handler/handler.ts:92</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
+<section class="tsd-panel tsd-member"><a id="_observable_" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>[observable]</span><a href="#_observable_" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="_observable_._observable_-1"><span class="tsd-kind-call-signature">[observable]</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://rxjs.dev/api/index/interface/Subscribable" class="tsd-signature-type external" target="_blank">Subscribable</a><span class="tsd-signature-symbol">&lt;</span><a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a><span class="tsd-signature-symbol">&gt;</span><a href="#_observable_._observable_-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Static <code>Symbol.observable</code> method returning a <a href="https://rxjs.dev/api/index/interface/Subscribable">Subscribable</a>. The
+returned <a href="https://rxjs.dev/api/index/interface/Subscribable">Subscribable</a> mirrors the private <a href="bus.BusHandler.html#loader" class="tsd-kind-property">loader</a> and is
+used for initializations after the <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a> has been
+successfully initialized.</p>
+
+<h3>Example</h3><p>Subscribe to the <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a>:</p>
+<pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">BusHandler</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@sgrud/bus&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-3">from</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;rxjs&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">from</span><span class="hl-1">(</span><span class="hl-3">BusHandler</span><span class="hl-1">).</span><span class="hl-0">subscribe</span><span class="hl-1">(</span><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/interface/Subscribable" class="tsd-signature-type external" target="_blank">Subscribable</a><span class="tsd-signature-symbol">&lt;</span><a href="bus.BusHandler.html" class="tsd-signature-type tsd-kind-class">BusHandler</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A <a href="https://rxjs.dev/api/index/interface/Subscribable">Subscribable</a> emitting this <a href="bus.BusHandler.html" class="tsd-kind-class">BusHandler</a>.</p>
+<aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L72">packages/bus/src/handler/handler.ts:72</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="observe" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>observe</span><a href="#observe" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -135,7 +177,7 @@ the returned <a href="https://rxjs.dev/api/index/class/Observable">Observable</a
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><a href="../types/bus.Bus-1.Value.html" class="tsd-signature-type tsd-kind-type-alias">Value</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>An <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> bus for <code>handle</code>.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L86">packages/bus/src/handler/handler.ts:86</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L160">packages/bus/src/handler/handler.ts:160</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="publish" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>publish</span><a href="#publish" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -173,7 +215,7 @@ supplied <code>handle</code> with the <a href="bus.BusWorker.html" class="tsd-ki
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><p>An <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> of the <code>stream</code> <strong>publish</strong>ment.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L119">packages/bus/src/handler/handler.ts:119</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L193">packages/bus/src/handler/handler.ts:193</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="uplink" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uplink</span><a href="#uplink" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -204,7 +246,7 @@ or throws an error, it is automatically cleaned up and unsubscribed from.</p>
 <h4 class="tsd-returns-title">Returns <a href="https://rxjs.dev/api/index/class/Observable" class="tsd-signature-type external" target="_blank">Observable</a><span class="tsd-signature-symbol">&lt;</span><a href="https://rxjs.dev/api/index/class/Subscription" class="tsd-signature-type external" target="_blank">Subscription</a><span class="tsd-signature-symbol">&gt;</span></h4><p>An <a href="https://rxjs.dev/api/index/class/Observable">Observable</a> of the <strong>uplink</strong> <a href="https://rxjs.dev/api/index/class/Subscription">Subscription</a>.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L157">packages/bus/src/handler/handler.ts:157</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/sgrud/client/blob/main/packages/bus/src/handler/handler.ts#L231">packages/bus/src/handler/handler.ts:231</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -224,7 +266,9 @@ or throws an error, it is automatically cleaned up and unsubscribed from.</p>
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg><span>constructor</span></a></li>
+<li><a href="#loader" class="tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>loader</span></a></li>
 <li><a href="#worker" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>worker</span></a></li>
+<li><a href="#_observable_" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>[observable]</span></a></li>
 <li><a href="#observe" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>observe</span></a></li>
 <li><a href="#publish" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>publish</span></a></li>
 <li><a href="#uplink" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>uplink</span></a></li></ul></div></details></div>
