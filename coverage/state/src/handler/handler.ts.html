@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>238/238</span>
+                <span class='fraction'>248/248</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.74% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>35/39</span>
+                <span class='fraction'>36/40</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>238/238</span>
+                <span class='fraction'>248/248</span>
             </div>
         
             
@@ -301,7 +301,17 @@
 <a name='L236'></a><a href='#L236'>236</a>
 <a name='L237'></a><a href='#L237'>237</a>
 <a name='L238'></a><a href='#L238'>238</a>
-<a name='L239'></a><a href='#L239'>239</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -398,14 +408,14 @@
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -420,6 +430,16 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -542,7 +562,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Bus, BusHandler } from '@sgrud/bus';
 import { Factor, Kernel, Singleton, Symbol, Thread, TypeOf } from '@sgrud/core';
 import { Remote, createEndpoint, transfer, wrap } from 'comlink';
-import { Observable, ReplaySubject, Subscribable, asapScheduler, asyncScheduler, defer, firstValueFrom, from, fromEvent, map, of, race, scheduled, switchMap } from 'rxjs';
+import { Observable, ReplaySubject, Subscribable, asapScheduler, asyncScheduler, defer, first, firstValueFrom, from, fromEvent, ignoreElements, map, of, race, scheduled, switchMap, timeout, timer } from 'rxjs';
 import { Effect } from '../effect/effect';
 import { Store } from '../store/store';
 import { StateWorker } from '../worker';
@@ -648,12 +668,12 @@ export class StateHandler {
 &nbsp;
         if (!globalThis.sgrud &amp;&amp; module.exports) {
           await navigator.serviceWorker.register(`${source}/${module.exports}`,{
-            scope: <span class="branch-0 cbranch-no" title="branch not covered" >scope </span>?? source,
+            scope: <span class="branch-0 cbranch-no" title="branch not covered" >scope ?? s</span>ource,
             type: 'module'
           });
         } else if (globalThis.sgrud &amp;&amp; module.unpkg) {
           await navigator.serviceWorker.register(`${source}/${module.unpkg}`, {
-            scope: <span class="branch-0 cbranch-no" title="branch not covered" >scope ?? s</span>ource,
+            scope: <span class="branch-0 cbranch-no" title="branch not covered" >scope </span>?? source,
             type: 'classic'
           });
         } else {
@@ -663,6 +683,16 @@ export class StateHandler {
         const serviceWorker = navigator.serviceWorker.controller!<span class="branch-0 cbranch-no" title="branch not covered" > || await (</span>
           firstValueFrom(fromEvent(navigator.serviceWorker, 'controllerchange'))
         ).then(() =&gt; navigator.serviceWorker.controller);
+&nbsp;
+        void firstValueFrom(timer(0, 2500).pipe(switchMap((counter) =&gt; {
+          serviceWorker.postMessage({ ping: counter = performance.now() });
+&nbsp;
+          return fromEvent(navigator.serviceWorker, 'message').pipe(
+            first((event) =&gt; (event as MessageEvent).data.pong === counter),
+            timeout({ first: 250 }),
+            ignoreElements()
+          );
+        })));
 &nbsp;
         const { port1, port2 } = new MessageChannel();
         serviceWorker.postMessage({ [name]: port1 }, [port1]);
@@ -689,7 +719,7 @@ export class StateHandler {
    * @param handle - The {@link Bus.Handle} representing the {@link Store}.
    * @param store - The {@link Store} to **deploy** under the supplied `handle`.
    * @param state - An initial {@link Store.State} for the {@link Store}.
-   * @param transient - Wether the {@link Store} is considered `transient`.
+   * @param transient - Whether the {@link Store} is considered `transient`.
    * @typeParam T - The extending {@link Store} {@link InstanceType}.
    * @returns An {@link Observable} of the {@link Store} **deploy**ment.
    */
@@ -784,7 +814,7 @@ export type { StateWorker };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-02T19:49:05.800Z
+                at 2023-06-04T18:37:04.524Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

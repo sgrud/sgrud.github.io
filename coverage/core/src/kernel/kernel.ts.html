@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>543/543</span>
+                <span class='fraction'>544/544</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>543/543</span>
+                <span class='fraction'>544/544</span>
             </div>
         
             
@@ -606,7 +606,9 @@
 <a name='L541'></a><a href='#L541'>541</a>
 <a name='L542'></a><a href='#L542'>542</a>
 <a name='L543'></a><a href='#L543'>543</a>
-<a name='L544'></a><a href='#L544'>544</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L544'></a><a href='#L544'>544</a>
+<a name='L545'></a><a href='#L545'>545</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -852,24 +854,24 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
-<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">71x</span>
@@ -1151,6 +1153,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { asyncScheduler, concat, defaultIfEmpty, defer, forkJoin, ignoreElements, map, Observable, of, ReplaySubject, Subscribable, switchMap, throwError } from 'rxjs';
 import { Http } from '../http/http';
+import { Alias } from '../typing/alias';
 import { Mutable } from '../typing/mutable';
 import { assign } from '../utility/assign';
 import { Singleton } from '../utility/singleton';
@@ -1178,7 +1181,7 @@ export namespace Kernel {
    * const digest: Kernel.Digest = 'sha256-[...]';
    * ```
    */
-  export type Digest = `sha${256 | 384 | 512}-${string}`;
+  export type Digest = Alias&lt;`sha${256 | 384 | 512}-${string}`&gt;;
 &nbsp;
   /**
    * Interface describing the shape of a **Module** while being aligned with
@@ -1432,7 +1435,7 @@ export class Kernel {
    *
    * @param module - The {@link Kernel.Module} definition to **insmod**.
    * @param source - An optional {@link Kernel.Module} `source`.
-   * @param execute - Wether to `execute` the {@link Kernel.Module}.
+   * @param execute - Whether to `execute` the {@link Kernel.Module}.
    * @returns An {@link Observable} of the {@link Kernel.Module} definition.
    * @throws An {@link Observable} {@link RangeError} or {@link ReferenceError}.
    *
@@ -1563,7 +1566,7 @@ export class Kernel {
    * definition is then passed to the {@link insmod} method and returned.
    *
    * @param id - The {@link Kernel.Module} name or source to **require**.
-   * @param execute - Wether to `execute` the {@link Kernel.Module}.
+   * @param execute - Whether to `execute` the {@link Kernel.Module}.
    * @returns An {@link Observable} of the {@link Kernel.Module} definition.
    *
    * @example
@@ -1699,7 +1702,7 @@ export class Kernel {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-02T19:49:05.800Z
+                at 2023-06-04T18:37:04.524Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
