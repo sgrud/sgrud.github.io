@@ -52,8 +52,8 @@
     }
   },
   "digest": {
-    "main": "sha256-IntXKWfd4+qJFJQ2oqO2x7Dm/MTzOjMiV34CRGYCLsA=",
-    "exports": "sha256-1+yY64W/NudfqZ+ugnlG5xNxJw86IN7u4WxJjstVp80=",
-    "unpkg": "sha256-XlTX2J7PNVEyRgke3gDMsNDsQPyADhZpPDNB5WLIJDM="
+    "main": "sha256-8gySrqw9rEPNDmoS1bOptUmIQfUAalsFApYn0MK8BTM=",
+    "exports": "sha256-3gcCaWcqGLbq1ixXmlHIri4rp+BkURXQCMdWvOMnJP4=",
+    "unpkg": "sha256-IrzGYekUp0/c4o935admujrQ4yx2dL+00wjKmCWpwXI="
   }
 }
