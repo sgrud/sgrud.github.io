@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">98.73% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>68/68</span>
+                <span class='fraction'>78/79</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">81.81% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/11</span>
+                <span class='fraction'>14/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">98.73% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>68/68</span>
+                <span class='fraction'>78/79</span>
             </div>
         
             
@@ -131,7 +131,18 @@
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -188,18 +199,29 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Mutable } from '@sgrud/core';
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Mutable, TypeOf } from '@sgrud/core';
 import { Component } from './component';
 &nbsp;
 /**
@@ -243,27 +265,38 @@ import { Component } from './component';
  *
  * @see {@link Component}
  */
-export<span class="branch-0 cbranch-no" title="branch not covered" > function A</span>ttribute(name?: string) {
+export function <span class="branch-0 cbranch-no" title="branch not covered" >Attribute(n</span>ame?: string) {
 &nbsp;
   /**
    * @param prototype - The {@link Component} `prototype` to be decorated.
    * @param propertyKey - The {@link Component} property to be decorated.
    */
   return function(prototype: Component, propertyKey: PropertyKey): void {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    const connectedCallback = prototype.connectedCallback;
     const key = name || propertyKey as string;
-    ((prototype as Mutable&lt;Component&gt;).observedAttributes ||= []).push(key);
 &nbsp;
-    Object.defineProperty(prototype, propertyKey, {
-      enumerable: true,
-      get(this: Component): string | undefined {
-        return this.getAttribute(key) ?? undefined;
-      },
-      set(this: Component, value: string): void {
-        if (this.<span class="branch-0 cbranch-no" title="branch not covered" >isConnected || !this.hasAttribute(key)) {</span>
-          this.setAttribute(key, value);
+    prototype.connectedCallback = function(this: Component): void {
+      Object.defineProperty(this, propertyKey, {
+        enumerable: true,
+        get(this: Component): string | undefined {
+          return this.getAttribute(key) ?? undefined;
+        },
+        set(this: Component, value: string): void {
+          if (TypeOf.null(value) || TypeOf.undefined(<span class="branch-0 cbranch-no" title="branch not covered" >value)) {</span>
+<span class="cstat-no" title="statement not covered" >            this.removeAttribute(key);</span>
+          } else {
+            this.setAttribute(key, value);
+          }
         }
-      }
-    });
+      });
+&nbsp;
+      return connectedCallback
+        ? connectedCallback.call(this)
+        : this.renderComponent?.();
+    };
+&nbsp;
+    ((prototype as Mutable&lt;Component&gt;).observedAttributes ||= []).push(key);
   };
 &nbsp;
 }
@@ -274,7 +307,7 @@ export<span class="branch-0 cbranch-no" title="branch not covered" > function A<
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-06-06T19:05:04.275Z
+                at 2023-06-08T13:48:25.362Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
