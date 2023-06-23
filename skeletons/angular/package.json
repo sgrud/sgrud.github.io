@@ -5,23 +5,22 @@
   "exports": "./sgrud-skeleton-angular.js",
   "unpkg": "./sgrud-skeleton-angular.js",
   "scripts": {
-    "build": "ng build --deploy-url /dist/",
+    "build": "ng build",
     "postbuild": "sgrud postbuild",
     "start": "sgrud universal ./dist/index.html"
   },
-  "browserslist": [],
   "devDependencies": {
     "@angular-builders/custom-webpack": "16.0.0",
-    "@angular/cli": "16.0.5",
-    "@angular/core": "16.0.4",
-    "@angular/elements": "16.0.4",
-    "@angular/platform-browser": "16.0.4",
-    "@angular/platform-browser-dynamic": "16.0.4",
+    "@angular/cli": "16.1.1",
+    "@angular/core": "16.1.2",
+    "@angular/elements": "16.1.2",
+    "@angular/platform-browser": "16.1.2",
+    "@angular/platform-browser-dynamic": "16.1.2",
     "@sgrud/bin": "latest",
     "tslib": "2.5.3"
   },
   "digest": {
-    "exports": "sha256-1K02wy7XYqCnBSOUoAZp8P01XiIWfvVf5/UO1q1DtF8=",
-    "unpkg": "sha256-1K02wy7XYqCnBSOUoAZp8P01XiIWfvVf5/UO1q1DtF8="
+    "exports": "sha256-eZpvJa7FY76rKY9HCs5UACSxwHDMlzvx/gmIgaMcQgI=",
+    "unpkg": "sha256-eZpvJa7FY76rKY9HCs5UACSxwHDMlzvx/gmIgaMcQgI="
   }
 }
