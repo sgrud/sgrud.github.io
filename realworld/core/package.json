@@ -11,13 +11,13 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "7.22.5",
+    "@babel/runtime": "7.23.6",
     "@sgrud/bus": "latest",
     "@sgrud/core": "latest",
     "@sgrud/shell": "latest",
     "@sgrud/state": "latest",
     "rxjs": "7.8.1",
-    "tslib": "2.5.3"
+    "tslib": "2.6.2"
   },
   "sgrudDependencies": {
     "@sgrud/bus": "latest",
@@ -52,8 +52,8 @@
     }
   },
   "digest": {
-    "main": "sha256-c+mER9Q8XomslKNILLy6sIvkVLcWItjr/3POagdVO/I=",
-    "exports": "sha256-+ZeSIUAXxSovlBYxFBIDiLIF8Zk7VAVppKwPIsQNmq0=",
-    "unpkg": "sha256-1CKLvynsE78UHgRNCNDsu0s1ws5K0Mh7h6VBDmJ7K7Q="
+    "main": "sha256-6MkXnNCJyHvDBsdiZ3LW6LhoDxs+4XfL5md66bMMnAQ=",
+    "exports": "sha256-6+sI3KqzWivYktlffVKQDEXAU0R3H4UZUxe9HduuyI8=",
+    "unpkg": "sha256-4A3/Olv02cQzXFlGUycpe5h3Ly/+J3JZEYkGnfJN2k8="
   }
 }

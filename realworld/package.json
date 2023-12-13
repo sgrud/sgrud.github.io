@@ -1,14 +1,14 @@
 {
   "name": "@sgrud/state/worker",
   "private": true,
-  "version": "0.0.24",
+  "version": "0.0.25",
   "types": "../src/worker/index.d.ts",
   "main": "./index.js",
   "exports": "./index.modern.js",
   "unpkg": "./index.umd.js",
   "digest": {
-    "main": "sha256-p5lNMOjla8QkhZFy9E6xQ/eoVOzzJM53HerYlfqWxo8=",
-    "exports": "sha256-NYWDz5KPTf4h+I5byWW/rpJUZZ7sOlafV2SHup2VkT0=",
-    "unpkg": "sha256-j0RgBK3x09FdFCAAXdujGzrZmaMpBcw6HoezzxO/Cb8="
+    "main": "sha256-C9E0cPcuf8n7QPz/NQEfyvfPRfPtUNgeyO53BNwNJuU=",
+    "exports": "sha256-uSCxzngf05OytXzVb02btKTWsi+fdR31PaEV+9ZPE/A=",
+    "unpkg": "sha256-GmkRoRkNjyGuVDgyFthDssWf4icv+jovGecIO+iF6gw="
   }
 }
